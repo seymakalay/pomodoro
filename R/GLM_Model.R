@@ -20,8 +20,8 @@
 #' BchMk.GLM_Model$Roc$auc
 
 
-
-
+# usethis::git_sitrep()
+#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
 #'
 GLM_Model <- function(Data, xvar, yvar){
 
