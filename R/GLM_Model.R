@@ -19,10 +19,16 @@
 #' BchMk.GLM_Model$finalModel
 #' BchMk.GLM_Model$Roc$auc
 
-
+#git clone https://github.com/seymakalay/pomodoro.git
 # usethis::git_sitrep()
 #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
+#Puclish to CRAN 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
 #'
+#'
+#'
+# gitcreds::gitcreds_set(url = "https://github.com/seymakalay/pomodoro")
+#
+
 GLM_Model <- function(Data, xvar, yvar){
 
   if (yvar == "Loan.Type"){

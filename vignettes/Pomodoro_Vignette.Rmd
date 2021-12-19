@@ -31,7 +31,7 @@ yvar  <- c("Loan.Type")
 m2.xvar0 <- c("sex", "married", "age", "havejob", "educ", "rural", "region","income","political.afl") 
 #m2.xvar1 <- c(m2.xvar0, "networth")   # with "networth"
 BchMk.MLR.1 <- Multinomial_Logit_Model(sample_data, c(m2.xvar0,"networth"), yvar)
-BchMk.MLR.1
+#BchMk.MLR.1
 BchMk.MLR.1$finalModel
 BchMk.MLR.1$Roc$auc
 ```
