@@ -64,3 +64,4 @@ RF_Model <- function(Data, xvar, yvar){ # #' @export was deleted
   Model.RF$ACC <- mean(Model.RF$Predicted_class == Y.test, na.rm=T)
   return(Model.RF)
 }
+

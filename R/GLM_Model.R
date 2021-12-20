@@ -87,3 +87,6 @@ GLM_Model <- function(Data, xvar, yvar){ # #' @export was deleted
 
 
 
+
+
+

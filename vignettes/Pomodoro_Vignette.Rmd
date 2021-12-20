@@ -60,13 +60,12 @@ CCP.RF.1  <- Estimate_Models(sample_data, yvar = c("Loan.Type"), exog = "politic
 CCP.RF.1
 ```
 
-
-
-```{r ComPerf, echo=FALSE}
 ### Combined_Performance
 
-#Estimate_Models gives the results based on the splits of the `exog`. 
-#Combined_Performance prints out the total performance of these splits.
+Estimate_Models gives the results based on the splits of the `exog`. 
+Combined_Performance prints out the total performance of these splits.
+
+```{r ComPerf, echo=FALSE}
 library(dplyr)
 sample_data <- sample_data[c(1:750),]
 m2.xvar0 <- c("sex", "married", "age", "havejob", "educ", "rural", "region","income") #, "ethnicity" "class.of.HH",
