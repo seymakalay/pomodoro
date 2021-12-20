@@ -3,16 +3,21 @@
 #' @param Data
 #' @param xvar
 #' @param yvar
-#'
-#' @return
+#' @return The output from  \code{\link{MLM_Model}}
 #' @export
 #' @importFrom  caret createDataPartition
 #' @importFrom  caret trainControl
 #' @importFrom  caret train
 #' @importFrom  pROC multiclass.roc
-#'
 #' @examples
-Multinomial_Logit_Model <- function(Data, xvar, yvar){
+#' yvar <- c("Loan.Type")
+#' sample_data <- sample_data[c(1:750),]
+#' m2.xvar0 <- c("sex", "married", "age", "havejob", "educ", "rural", "region","income")
+#' BchMk.MLM <- MLM_Model(sample_data, c(m2.xvar0, "political.afl", "networth"), yvar)
+#' BchMk.MLM$finalModel
+#' BchMk.MLM$Roc$auc
+#'
+MLM_Model <- function(Data, xvar, yvar){
   # This can be implemented with mlogit() from mlogit package and multinom() from nnet package.
 
   set.seed(87)
