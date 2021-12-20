@@ -28,12 +28,12 @@ The following example run the `multinominal logistic model` in `yvar`. The funct
 ```{r MLR, echo=FALSE}
 sample_data <- sample_data[1:500,]
 yvar  <- c("Loan.Type")
-m2.xvar0 <- c("sex", "married", "age", "havejob", "educ", "rural", "region","income","political.afl") 
+m2.xvar0 <- c("sex", "married", "age", "havejob", "educ", "rural", "region","income","political.afl")
 #m2.xvar1 <- c(m2.xvar0, "networth")   # with "networth"
-BchMk.MLR.1 <- Multinomial_Logit_Model(sample_data, c(m2.xvar0,"networth"), yvar)
+BchMk.MLM.1 <- RF_Model(sample_data, c(m2.xvar0,"networth"), yvar)
 #BchMk.MLR.1
-BchMk.MLR.1$finalModel
-BchMk.MLR.1$Roc$auc
+BchMk.MLM.1$finalModel
+BchMk.MLM.1$Roc$auc
 ```
 
 
@@ -45,35 +45,35 @@ On the other hand `xadd` add the selected vectors and run the model.
 Where the `dnames` are the unique values in `exog` this is to save the model estimates by their name.
 
 ```{r EstModel, echo=FALSE}
-sample_data <- sample_data[1:500,]
 library(dplyr)
 CCP <- sample_data %>% filter(sample_data$political.afl==1)
 NoCCP <- sample_data %>% filter(sample_data$political.afl==0)
 
-yvar  <- c("Loan.Type")
-m2.xvar0 <- c("sex", "married", "age", "havejob", "educ", "rural", "region","income","political.afl") #, "ethnicity" "class.of.HH",
+#yvar  <- c("Loan.Type")
+#m2.xvar0 <- c("sex", "married", "age", "havejob", "educ", "rural", "region","income","political.afl") #, "ethnicity" "class.of.HH",
 
 
 # CCP.MLR.1 <-  RF_Model(CCP, m2.xvar1, yvar)
 # NoCCP.MLR.1 <-  RF_Model(NoCCP, m2.xvar1, yvar)
 
-CCP.RF.1  <- Estimate_Models(sample_data, yvar=c("Loan.Type"), exog = "political.afl", xvec=m2.xvar0, xadd="networth", type="RF", dnames=c("0","1"))
+CCP.RF.1  <- Estimate_Models(sample_data, yvar = c("Loan.Type"), exog = "political.afl", xvec = m2.xvar0, xadd="networth", type="RF", dnames=c("0","1"))
 CCP.RF.1
 ```
 
-### Combined_Performance
 
-Estimate_Models gives the results based on the splits of the `exog`. 
-Combined_Performance prints out the total performance of these splits.
 
 ```{r ComPerf, echo=FALSE}
-CCP.MLR.1 <-  RF_Model(CCP, m2.xvar0, yvar)
-NoCCP.MLR.1 <-  RF_Model(NoCCP, m2.xvar0, yvar)
+### Combined_Performance
 
-Sub.CCP.MLR.RF <- list(Mdl.1 = CCP.MLR.1,  Mdl.2 = NoCCP.MLR.1)
+#Estimate_Models gives the results based on the splits of the `exog`. 
+#Combined_Performance prints out the total performance of these splits.
+#CCP.MLR.1 <-  RF_Model(CCP, m2.xvar0, yvar)
+#NoCCP.MLR.1 <-  RF_Model(NoCCP, m2.xvar0, yvar)
+
+#Sub.CCP.MLR.RF <- list(Mdl.1 = CCP.MLR.1,  Mdl.2 = NoCCP.MLR.1)
 
 # CCP.NoCCP.MLR.1 <- Combined_Performance(CCP.MLR.1, NoCCP.MLR.1)
-CCP.NoCCP.MLR.1 <- Combined_Performance(Sub.CCP.MLR.RF)
-CCP.NoCCP.MLR.1$Roc$auc
+#CCP.NoCCP.MLR.1 <- Combined_Performance(Sub.CCP.MLR.RF)
+#CCP.NoCCP.MLR.1$Roc$auc
 ```
 

@@ -21,10 +21,9 @@ Title
 }
 \examples{
 yvar <- c("Loan.Type")
+sample_data <- sample_data[c(1:750),]
 m2.xvar0 <- c("sex", "married", "age", "havejob", "educ", "rural", "region","income")
-m2.xvar1 <- c(m2.xvar0, "networth")
 BchMk.MLR.1 <- RF_Model(sample_data, c(m2.xvar0, "political.afl", "networth"), yvar)
 BchMk.MLR.1$finalModel
 BchMk.MLR.1$Roc$auc
-
 }

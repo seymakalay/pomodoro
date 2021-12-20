@@ -1,25 +1,28 @@
 
-
 #' Title
-#'
 #' @param Sub.Est.Mdls
 #'
-#' @return
+#' @return The output from  \code{\link{Combined_Performance}}
 #' @export
-#'
 #' @examples
-#' CCP.RF.1  <- ESTIMATE_MODELS(sample_data, yvar=c("Loan.Type"), exog = "political.afl", xvec=m2.xvar0, xadd="networth", type="RF", dnames=c("0","1"))
-#' CCP.GLM.1  <- ESTIMATE_MODELS(CCP, yvar=c("Loan.Type"), exog = "political.afl", m2.xvar0, xadd="networth", type="GLM", dnames=c(0,1))
-#'
-#' CCP.MLR.1 <-  RF_Model(CCP, m2.xvar1, yvar)
-#' NoCCP.MLR.1 <-  RF_Model(NoCCP, m2.xvar1, yvar)
-#' Sub.CCP.MLR.RF <- list(Mdl.1 = CCP.MLR.1,  Mdl.2= NoCCP.MLR.1  )
+#' library(dplyr)
+#' sample_data <- sample_data[c(1:750),]
+#' m2.xvar0 <- c("sex", "married", "age", "havejob", "educ", "rural", "region","income") #, "ethnicity" "class.of.HH",
+#' m2.xvar1 <- c(m2.xvar0, "networth")   # with "networth"
+#' CCP <- sample_data %>% filter(sample_data$political.afl==1)
+#' NoCCP <- sample_data %>% filter(sample_data$political.afl==0)
+#` CCP.RF <-  RF_Model(CCP, m2.xvar1, yvar)
+#` NoCCP.RF <-  RF_Model(NoCCP, m2.xvar1, yvar)
+#` Sub.CCP.RF <- list(Mdl.1 = CCP.RF,  Mdl.2= NoCCP.RF)
+#` CCP.NoCCP.RF <- Combined_Performance(Sub.CCP.RF)
+#` CCP.NoCCP.RF$Roc$auc
+
 
 
 
 
 Combined_Performance <- function(Sub.Est.Mdls)
-{
+{# #' @export was deleted
   nmdls <- length(Sub.Est.Mdls)
   Pred_prob <- NULL
   for (ii in 1:nmdls) {

@@ -8,14 +8,15 @@
 #' @param xadd
 #' @param type
 #' @param dnames
-#'
-#' @return
+#' @return The output from  \code{\link{Estimate_Models}}
 #' @export
-#'
 #' @examples
-#' CCP.RF.1  <- Estimate_Models(sample_data, yvar=c("Loan.Type"), exog = "political.afl", xvec = m2.xvar0, xadd = "networth", type = "RF", dnames = c("0","1"))
-#'
-Estimate_Models <- function(DataSet, yvar, exog = NULL, xvec, xadd, type, dnames){
+#' sample_data <- sample_data[c(1:750),]
+#' m2.xvar0 <- c("sex", "married", "age", "havejob", "educ", "rural", "region","income") #, "ethnicity" "class.of.HH",
+# CCP.RF <- Estimate_Models(sample_data, yvar = c("Loan.Type"), exog = "political.afl", xvec = m2.xvar0, xadd = "networth", type = "RF", dnames = c("0","1"))
+
+
+Estimate_Models <- function(DataSet, yvar, exog = NULL, xvec, xadd, type, dnames){ # #' @export was deleted
 
   Data.All <- DataSet
 
@@ -65,7 +66,7 @@ Estimate_Models <- function(DataSet, yvar, exog = NULL, xvec, xadd, type, dnames
 
         Mdl.names[k] <- paste(a[i], xadd[j], sep = "+")
         # GLM.EstMdl[[k]] <- c(i,j)
-        EstMdl[[k]] <- GLM_Logit_Model(my.list[[i]], xvar.1, yvar)
+        EstMdl[[k]] <- GLM_Model(my.list[[i]], xvar.1, yvar)
       }
     }
   }

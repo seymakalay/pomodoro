@@ -4,22 +4,18 @@
 #' @param Data The name of the Dataset.
 #' @param xvar X variables
 #' @param yvar Y variable
-#'
 #' @return The output from  \code{\link{BAG_Model}}
 #' @export
 #' @importFrom  gbm gbm.fit
 #' @examples
 #' yvar <- c("Loan.Type")
+#' sample_data <- sample_data[c(1:750),]
 #' m2.xvar0 <- c("sex", "married", "age", "havejob", "educ", "rural", "region","income")
-#' m2.xvar1 <- c(m2.xvar0, "networth")
-#' BchMk.MLR.1 <- BAG_Model(sample_data, c(m2.xvar0, "political.afl", "networth"), yvar)
-#' BchMk.MLR.1$finalModel
-#' BchMk.MLR.1$Roc$auc
+#' BchMk.BAG <- BAG_Model(sample_data, c(m2.xvar0, "political.afl", "networth"), yvar)
+#' BchMk.BAG$finalModel
+#' BchMk.BAG$Roc$auc
 
 
-
-
-#'
 BAG_Model <- function(Data, xvar, yvar){
 
   #I ADDED THIS IF BUT IT GIVES ERROR

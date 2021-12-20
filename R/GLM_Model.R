@@ -4,39 +4,31 @@
 #' @param Data The name of the Dataset.
 #' @param xvar X variables
 #' @param yvar Y variable
-#'
 #' @return The output from  \code{\link{GLM_Model}}
 #' @export
 #' @importFrom  caret createDataPartition
 #' @importFrom  caret trainControl
 #' @importFrom  caret train
 #' @importFrom  pROC multiclass.roc
+#' @importFrom stats glm
 #' @examples
 #' yvar <- c("multi.level")
+#' sample_data <- sample_data[c(1:750),]
 #' m2.xvar0 <- c("sex", "married", "age", "havejob", "educ", "rural", "region","income")
-#' m2.xvar1 <- c(m2.xvar0, "networth")
-#' BchMk.GLM_Model <- GLM_Model(sample_data, c(m2.xvar0, "political.afl", "networth"), yvar)
-#' BchMk.GLM_Model$finalModel
-#' BchMk.GLM_Model$Roc$auc
+#' BchMk.GLM <- GLM_Model(sample_data, c(m2.xvar0, "political.afl", "networth"), yvar)
+#' BchMk.GLM$finalModel
+#' BchMk.GLM$Roc$auc
 
-#git clone https://github.com/seymakalay/pomodoro.git
-# usethis::git_sitrep()
-#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
-#Puclish to CRAN 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
-#'
-#'
-#'
-# gitcreds::gitcreds_set(url = "https://github.com/seymakalay/pomodoro")
-#
 
-GLM_Model <- function(Data, xvar, yvar){
+
+GLM_Model <- function(Data, xvar, yvar){ # #' @export was deleted
 
   if (yvar == "Loan.Type"){
     Data.sub <- Data[, c(xvar, yvar)]
     Data.sub[, yvar] <- factor(Data.sub[, yvar], levels = c( "No.Loan", "Formal",  "Informal", "L.Both"))
   } else if(yvar == "multi.level"){
     Data.sub <- Data[, c(xvar, yvar)]
-    #Data.sub[, yvar] <- factor(Data.sub[, yvar], levels = c( "zero", "one"))
+    Data.sub[, yvar] <- factor(Data.sub[, yvar], levels = c( "zero", "one"))
   }
 
   set.seed(87)

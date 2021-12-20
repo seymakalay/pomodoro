@@ -21,10 +21,9 @@ Title
 }
 \examples{
 yvar <- c("multi.level")
+sample_data <- sample_data[c(1:750),]
 m2.xvar0 <- c("sex", "married", "age", "havejob", "educ", "rural", "region","income")
-m2.xvar1 <- c(m2.xvar0, "networth")
-BchMk.GLM_Model <- GLM_Model(sample_data, c(m2.xvar0, "political.afl", "networth"), yvar)
-BchMk.GLM_Model$finalModel
-BchMk.GLM_Model$Roc$auc
-
+BchMk.GLM <- GLM_Model(sample_data, c(m2.xvar0, "political.afl", "networth"), yvar)
+BchMk.GLM$finalModel
+BchMk.GLM$Roc$auc
 }
