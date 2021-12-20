@@ -4,23 +4,24 @@
 #' @param Data The name of the Dataset.
 #' @param xvar X variables
 #' @param yvar Y variable
-#'
 #' @return The output from  \code{\link{GBM_Model}}
 #' @export
 #' @importFrom  gbm gbm.fit
+#' @importFrom  caret createDataPartition
+#' @importFrom  caret trainControl
+#' @importFrom  caret train
+#' @importFrom  pROC multiclass.roc
 #' @examples
 #' yvar <- c("Loan.Type")
+#' sample_data <- sample_data[c(1:750),]
 #' m2.xvar0 <- c("sex", "married", "age", "havejob", "educ", "rural", "region","income")
-#' m2.xvar1 <- c(m2.xvar0, "networth")
-#' BchMk.MLR.1 <- GBM_Model(sample_data, c(m2.xvar0, "political.afl", "networth"), yvar)
-#' BchMk.MLR.1$finalModel
-#' BchMk.MLR.1$Roc$auc
+#' BchMk.GBM <- GBM_Model(sample_data, c(m2.xvar0, "political.afl", "networth"), yvar)
+#' BchMk.GBM$finalModel
+#' BchMk.GBM$Roc$auc
 
 
 
-
-#'
-GBM_Model <- function(Data, xvar, yvar){
+GBM_Model <- function(Data, xvar, yvar){ # #' @export was deleted
 
   #I ADDED THIS IF BUT IT GIVES ERROR
   if (yvar == "Loan.Type"){
