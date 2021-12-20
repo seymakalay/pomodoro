@@ -6,6 +6,13 @@
 \usage{
 MLM_Model(Data, xvar, yvar)
 }
+\arguments{
+\item{Data}{The name of the Dataset.}
+
+\item{xvar}{X variables}
+
+\item{yvar}{Y variable}
+}
 \value{
 The output from  \code{\link{MLM_Model}}
 }
