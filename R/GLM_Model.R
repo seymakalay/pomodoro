@@ -2,15 +2,16 @@
 #' Title
 #'
 #' @param Data The name of the Dataset.
-#' @param xvar X variables
-#' @param yvar Y variable
-#' @return The output from  \code{\link{GLM_Model}}
+#' @param xvar X variables.
+#' @param yvar Y variable.
+#' @return The output from  \code{\link{GLM_Model}}.
 #' @export
 #' @importFrom  caret createDataPartition
 #' @importFrom  caret trainControl
 #' @importFrom  caret train
 #' @importFrom  pROC multiclass.roc
 #' @importFrom stats glm
+#' @importFrom stats binomial pnorm predict
 #' @examples
 #' yvar <- c("multi.level")
 #' sample_data <- sample_data[c(1:750),]

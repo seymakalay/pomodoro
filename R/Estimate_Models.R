@@ -1,22 +1,21 @@
 
 #' Title
-#'
-#' @param DataSet
-#' @param yvar
-#' @param exog
-#' @param xvec
-#' @param xadd
-#' @param type
-#' @param dnames
-#' @return The output from  \code{\link{Estimate_Models}}
+#' @param DataSet The name of the Dataset.
+#' @param yvar Y variable.
+#' @param exog is a vector to be subtract from the calculation.
+#' @param xvec is a vector of the variables to be used.
+#' @param xadd  is an additional vector to be used.
+#' @param type  can be RF, GLM, MLM, BAG, and GBM.
+#' @param dnames  is the unique values of exog.
+#' @return The output from  \code{\link{Estimate_Models}}.
 #' @export
 #' @examples
 #' sample_data <- sample_data[c(1:750),]
-#' m2.xvar0 <- c("sex", "married", "age", "havejob", "educ", "rural", "region","income") #, "ethnicity" "class.of.HH",
+#' m2.xvar0 <- c("sex","married","age","havejob","educ","rural","region","income")
 # CCP.RF <- Estimate_Models(sample_data, yvar = c("Loan.Type"), exog = "political.afl", xvec = m2.xvar0, xadd = "networth", type = "RF", dnames = c("0","1"))
 
 
-Estimate_Models <- function(DataSet, yvar, exog = NULL, xvec, xadd, type, dnames){ # #' @export was deleted
+Estimate_Models <- function(DataSet, yvar, exog = NULL, xvec, xadd, type, dnames){
 
   Data.All <- DataSet
 
@@ -81,6 +80,19 @@ Estimate_Models <- function(DataSet, yvar, exog = NULL, xvec, xadd, type, dnames
 
         Mdl.names[k] <- paste(a[i], xadd[j], sep = "+")
         EstMdl[[k]] <- RF_Model(my.list[[i]], xvar.1, yvar)
+      }
+    }
+  }
+
+  if (type == "MLM"){
+    for(i in 1:length(my.list)){
+
+      for (j in 1:length(xadd)) {
+        xvar.1 <- c(xvar.0, xadd[j])
+        k = k + 1
+
+        Mdl.names[k] <- paste(a[i], xadd[j], sep = "+")
+        EstMdl[[k]] <- MLM_Model(my.list[[i]], xvar.1, yvar)
       }
     }
   }

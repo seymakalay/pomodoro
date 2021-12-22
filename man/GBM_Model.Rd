@@ -9,19 +9,19 @@ GBM_Model(Data, xvar, yvar)
 \arguments{
 \item{Data}{The name of the Dataset.}
 
-\item{xvar}{X variables}
+\item{xvar}{X variables.}
 
-\item{yvar}{Y variable}
+\item{yvar}{Y variable.}
 }
 \value{
-The output from  \code{\link{GBM_Model}}
+The output from  \code{\link{GBM_Model}}.
 }
 \description{
 Title
 }
 \examples{
 yvar <- c("Loan.Type")
-sample_data <- sample_data[c(1:750),]
+sample_data <- sample_data[c(1:120),]
 m2.xvar0 <- c("sex", "married", "age", "havejob", "educ", "rural", "region","income")
 BchMk.GBM <- GBM_Model(sample_data, c(m2.xvar0, "political.afl", "networth"), yvar)
 BchMk.GBM$finalModel

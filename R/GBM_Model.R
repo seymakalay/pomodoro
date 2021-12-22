@@ -2,18 +2,19 @@
 #' Title
 #'
 #' @param Data The name of the Dataset.
-#' @param xvar X variables
-#' @param yvar Y variable
-#' @return The output from  \code{\link{GBM_Model}}
+#' @param xvar X variables.
+#' @param yvar Y variable.
+#' @return The output from  \code{\link{GBM_Model}}.
 #' @export
 #' @importFrom  gbm gbm.fit
 #' @importFrom  caret createDataPartition
 #' @importFrom  caret trainControl
 #' @importFrom  caret train
 #' @importFrom  pROC multiclass.roc
+#' @importFrom stats binomial pnorm predict
 #' @examples
 #' yvar <- c("Loan.Type")
-#' sample_data <- sample_data[c(1:750),]
+#' sample_data <- sample_data[c(1:120),]
 #' m2.xvar0 <- c("sex", "married", "age", "havejob", "educ", "rural", "region","income")
 #' BchMk.GBM <- GBM_Model(sample_data, c(m2.xvar0, "political.afl", "networth"), yvar)
 #' BchMk.GBM$finalModel

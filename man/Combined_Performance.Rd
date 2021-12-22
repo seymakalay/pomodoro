@@ -7,10 +7,10 @@
 Combined_Performance(Sub.Est.Mdls)
 }
 \arguments{
-\item{Sub.Est.Mdls}{}
+\item{Sub.Est.Mdls}{is the total perfomance of exog.}
 }
 \value{
-The output from  \code{\link{Combined_Performance}}
+The output from  \code{\link{Combined_Performance}}.
 }
 \description{
 Title
@@ -18,7 +18,7 @@ Title
 \examples{
 library(dplyr)
 sample_data <- sample_data[c(1:750),]
-m2.xvar0 <- c("sex", "married", "age", "havejob", "educ", "rural", "region","income") #, "ethnicity" "class.of.HH",
+m2.xvar0 <- c("sex","married","age","havejob","educ","rural","region","income")
 m2.xvar1 <- c(m2.xvar0, "networth")   # with "networth"
 CCP <- sample_data \%>\% filter(sample_data$political.afl==1)
 NoCCP <- sample_data \%>\% filter(sample_data$political.afl==0)

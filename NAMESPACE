@@ -15,3 +15,5 @@ importFrom(pROC,multiclass.roc)
 importFrom(stats,glm)
 importFrom(tibble,data_frame)
 importFrom(utils,head)
+importFrom(stats, binomial, pnorm, predict)
+

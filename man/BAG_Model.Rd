@@ -9,12 +9,12 @@ BAG_Model(Data, xvar, yvar)
 \arguments{
 \item{Data}{The name of the Dataset.}
 
-\item{xvar}{X variables}
+\item{xvar}{X variables.}
 
-\item{yvar}{Y variable}
+\item{yvar}{Y variable.}
 }
 \value{
-The output from  \code{\link{BAG_Model}}
+The output from  \code{\link{BAG_Model}}.
 }
 \description{
 Title

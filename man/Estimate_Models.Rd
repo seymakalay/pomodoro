@@ -6,13 +6,28 @@
 \usage{
 Estimate_Models(DataSet, yvar, exog = NULL, xvec, xadd, type, dnames)
 }
+\arguments{
+\item{DataSet}{The name of the Dataset.}
+
+\item{yvar}{Y variable.}
+
+\item{exog}{is a vector to be subtract from the calculation.}
+
+\item{xvec}{is a vector of the variables to be used.}
+
+\item{xadd}{is an additional vector to be used.}
+
+\item{type}{can be RF, GLM, MLM, BAG, and GBM.}
+
+\item{dnames}{is the unique values of exog.}
+}
 \value{
-The output from  \code{\link{Estimate_Models}}
+The output from  \code{\link{Estimate_Models}}.
 }
 \description{
 Title
 }
 \examples{
 sample_data <- sample_data[c(1:750),]
-m2.xvar0 <- c("sex", "married", "age", "havejob", "educ", "rural", "region","income") #, "ethnicity" "class.of.HH",
+m2.xvar0 <- c("sex","married","age","havejob","educ","rural","region","income")
 }

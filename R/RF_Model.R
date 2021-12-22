@@ -2,14 +2,15 @@
 #' Title
 #'
 #' @param Data The name of the Dataset.
-#' @param xvar X variables
-#' @param yvar Y variable
-#' @return The output from  \code{\link{RF_Model}}
+#' @param xvar X variables.
+#' @param yvar Y variable.
+#' @return The output from  \code{\link{RF_Model}}.
 #' @export
 #' @importFrom  pROC multiclass.roc
+#' @importFrom stats binomial pnorm predict
 #' @examples
 #' yvar <- c("Loan.Type")
-#' sample_data <- sample_data[c(1:750),]
+#' sample_data <- sample_data[c(1:250),]
 #' m2.xvar0 <- c("sex", "married", "age", "havejob", "educ", "rural", "region","income")
 #' BchMk.MLR.1 <- RF_Model(sample_data, c(m2.xvar0, "political.afl", "networth"), yvar)
 #' BchMk.MLR.1$finalModel

@@ -9,19 +9,19 @@ RF_Model(Data, xvar, yvar)
 \arguments{
 \item{Data}{The name of the Dataset.}
 
-\item{xvar}{X variables}
+\item{xvar}{X variables.}
 
-\item{yvar}{Y variable}
+\item{yvar}{Y variable.}
 }
 \value{
-The output from  \code{\link{RF_Model}}
+The output from  \code{\link{RF_Model}}.
 }
 \description{
 Title
 }
 \examples{
 yvar <- c("Loan.Type")
-sample_data <- sample_data[c(1:750),]
+sample_data <- sample_data[c(1:250),]
 m2.xvar0 <- c("sex", "married", "age", "havejob", "educ", "rural", "region","income")
 BchMk.MLR.1 <- RF_Model(sample_data, c(m2.xvar0, "political.afl", "networth"), yvar)
 BchMk.MLR.1$finalModel

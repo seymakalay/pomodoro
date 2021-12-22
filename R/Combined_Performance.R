@@ -1,13 +1,12 @@
 
 #' Title
-#' @param Sub.Est.Mdls
-#'
-#' @return The output from  \code{\link{Combined_Performance}}
+#' @param Sub.Est.Mdls is the total perfomance of exog.
+#' @return The output from  \code{\link{Combined_Performance}}.
 #' @export
 #' @examples
 #' library(dplyr)
 #' sample_data <- sample_data[c(1:750),]
-#' m2.xvar0 <- c("sex", "married", "age", "havejob", "educ", "rural", "region","income") #, "ethnicity" "class.of.HH",
+#' m2.xvar0 <- c("sex","married","age","havejob","educ","rural","region","income")
 #' m2.xvar1 <- c(m2.xvar0, "networth")   # with "networth"
 #' CCP <- sample_data %>% filter(sample_data$political.afl==1)
 #' NoCCP <- sample_data %>% filter(sample_data$political.afl==0)
@@ -21,8 +20,7 @@
 
 
 
-Combined_Performance <- function(Sub.Est.Mdls)
-{# #' @export was deleted
+Combined_Performance <- function(Sub.Est.Mdls){
   nmdls <- length(Sub.Est.Mdls)
   Pred_prob <- NULL
   for (ii in 1:nmdls) {
@@ -31,18 +29,18 @@ Combined_Performance <- function(Sub.Est.Mdls)
 
   Actual <- NULL
   for (ii in 1:nmdls) {
-    Actual <- as.matrix( rbind(Actual, Sub.Est.Mdls[[ii]]$Actual) )
+    Actual <- as.matrix(rbind(Actual, Sub.Est.Mdls[[ii]]$Actual))
   }
 
   Combine.Mdl <- list(Pred_prob = Pred_prob)
   Combine.Mdl$Actual <- factor(Actual)
 
-  Combine.Mdl$Roc <- multiclass.roc(Combine.Mdl$Actual, Pred_prob )
+  Combine.Mdl$Roc <- multiclass.roc(Combine.Mdl$Actual, Pred_prob)
 
   ### Confusion Matrix
   Predicted_class <- NULL
-  for (ii in 1:nmdls) {
-    Predicted_class <-  rbind( Predicted_class, as.matrix(Sub.Est.Mdls[[ii]]$Predicted_class))
+  for (ii in 1:nmdls){
+    Predicted_class <-  rbind(Predicted_class, as.matrix(Sub.Est.Mdls[[ii]]$Predicted_class))
   }
 
   Combine.Mdl$Predicted_class <- Predicted_class

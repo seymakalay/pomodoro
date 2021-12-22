@@ -6,8 +6,15 @@
 \usage{
 MLM_Model(Data, xvar, yvar)
 }
+\arguments{
+\item{Data}{The name of the Dataset.}
+
+\item{xvar}{X variables.}
+
+\item{yvar}{Y variable.}
+}
 \value{
-The output from  \code{\link{MLM_Model}}
+The output from  \code{\link{MLM_Model}}.
 }
 \description{
 Title
@@ -19,4 +26,5 @@ m2.xvar0 <- c("sex", "married", "age", "havejob", "educ", "rural", "region","inc
 BchMk.MLM <- MLM_Model(sample_data, c(m2.xvar0, "political.afl", "networth"), yvar)
 BchMk.MLM$finalModel
 BchMk.MLM$Roc$auc
+
 }
