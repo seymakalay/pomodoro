@@ -13,23 +13,29 @@
 #' @importFrom  pROC multiclass.roc
 #' @importFrom stats binomial pnorm predict
 #' @examples
+#' \donttest{
 #' yvar <- c("Loan.Type")
 #' sample_data <- sample_data[c(1:120),]
 #' m2.xvar0 <- c("sex", "married", "age", "havejob", "educ", "rural", "region","income")
 #' BchMk.GBM <- GBM_Model(sample_data, c(m2.xvar0, "political.afl", "networth"), yvar)
 #' BchMk.GBM$finalModel
 #' BchMk.GBM$Roc$auc
+#' }
+
+
+
+
 
 
 
 GBM_Model <- function(Data, xvar, yvar){ # #' @export was deleted
 
-  #I ADDED THIS IF BUT IT GIVES ERROR
+
   if (yvar == "Loan.Type"){
     Data.sub <- Data[, c(xvar, yvar)]
     Data.sub[, yvar] <- factor(Data.sub[, yvar], levels = c( "No.Loan", "Formal",  "Informal", "L.Both"))
 
-    set.seed(87)
+    #set.seed(87)
     train.set <- createDataPartition(Data.sub[, yvar], p = .80, list = 0)
     Data.sub.train <- Data.sub[ train.set, ]
     Data.sub.test  <- Data.sub[-train.set, ]
@@ -49,7 +55,7 @@ GBM_Model <- function(Data, xvar, yvar){ # #' @export was deleted
   } else if(yvar == "multi.level"){
     Data.sub <- Data[, c(xvar, yvar)]
 
-    set.seed(87)
+    #set.seed(87)
     train.set <- createDataPartition(Data.sub[, yvar], p = .80, list = 0)
     Data.sub.train <- Data.sub[ train.set, ]
     Data.sub.test  <- Data.sub[-train.set, ]

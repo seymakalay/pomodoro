@@ -22,6 +22,8 @@
 
 
 
+
+
 GLM_Model <- function(Data, xvar, yvar){ # #' @export was deleted
 
   if (yvar == "Loan.Type"){
@@ -32,7 +34,7 @@ GLM_Model <- function(Data, xvar, yvar){ # #' @export was deleted
     Data.sub[, yvar] <- factor(Data.sub[, yvar], levels = c( "zero", "one"))
   }
 
-  set.seed(87)
+  #set.seed(87)
   #Data.sub[, yvar] <- factor(Data.sub[, yvar], levels = c( "zero", "one"))
   train.set <-  createDataPartition(Data.sub[, yvar], p = .80, list = 0)
   Data.sub.train <- Data.sub[ train.set, ]

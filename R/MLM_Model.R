@@ -17,11 +17,13 @@
 #' BchMk.MLM <- MLM_Model(sample_data, c(m2.xvar0, "political.afl", "networth"), yvar)
 #' BchMk.MLM$finalModel
 #' BchMk.MLM$Roc$auc
-#'
+
+
+
 MLM_Model <- function(Data, xvar, yvar){
   # This can be implemented with mlogit() from mlogit package and multinom() from nnet package.
 
-  set.seed(87)
+  #set.seed(87)
   Data <- as.data.frame(Data)
   Data.sub <- Data[, c(xvar, yvar)]
   #Data.sub$Loan.Type <- factor(Data.sub$Loan.Type)

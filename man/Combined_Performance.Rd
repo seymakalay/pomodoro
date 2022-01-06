@@ -16,10 +16,12 @@ The output from  \code{\link{Combined_Performance}}.
 Title
 }
 \examples{
+\donttest{
 library(dplyr)
 sample_data <- sample_data[c(1:750),]
 m2.xvar0 <- c("sex","married","age","havejob","educ","rural","region","income")
 m2.xvar1 <- c(m2.xvar0, "networth")   # with "networth"
 CCP <- sample_data \%>\% filter(sample_data$political.afl==1)
 NoCCP <- sample_data \%>\% filter(sample_data$political.afl==0)
+}
 }

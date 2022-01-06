@@ -28,6 +28,11 @@ The output from  \code{\link{Estimate_Models}}.
 Title
 }
 \examples{
+\donttest{
 sample_data <- sample_data[c(1:750),]
 m2.xvar0 <- c("sex","married","age","havejob","educ","rural","region","income")
+CCP.RF <- Estimate_Models(sample_data, yvar = c("Loan.Type"),
+exog = "political.afl", xvec = m2.xvar0,
+xadd = "networth", type = "RF", dnames = c("0","1"))
+}
 }

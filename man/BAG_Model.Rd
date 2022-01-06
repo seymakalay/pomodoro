@@ -20,10 +20,12 @@ The output from  \code{\link{BAG_Model}}.
 Title
 }
 \examples{
+\donttest{
 yvar <- c("Loan.Type")
 sample_data <- sample_data[c(1:750),]
 m2.xvar0 <- c("sex", "married", "age", "havejob", "educ", "rural", "region","income")
 BchMk.BAG <- BAG_Model(sample_data, c(m2.xvar0, "political.afl", "networth"), yvar)
 BchMk.BAG$finalModel
 BchMk.BAG$Roc$auc
+}
 }

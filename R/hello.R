@@ -7,7 +7,7 @@
 #'
 #' @examples
 #' hello("Seyma")
-#' \dontrun{
+#' \donttest{
 #' hello("Steve")
 #' }
 hello <- function(x) {

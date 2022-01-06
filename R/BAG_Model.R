@@ -10,17 +10,20 @@
 #' @importFrom  ipred bagging
 #' @importFrom stats binomial pnorm predict
 #' @examples
+#' \donttest{
 #' yvar <- c("Loan.Type")
 #' sample_data <- sample_data[c(1:750),]
 #' m2.xvar0 <- c("sex", "married", "age", "havejob", "educ", "rural", "region","income")
 #' BchMk.BAG <- BAG_Model(sample_data, c(m2.xvar0, "political.afl", "networth"), yvar)
 #' BchMk.BAG$finalModel
 #' BchMk.BAG$Roc$auc
+#' }
+
 
 
 BAG_Model <- function(Data, xvar, yvar){
 
-  #I ADDED THIS IF BUT IT GIVES ERROR
+
   if (yvar == "Loan.Type"){
     Data.sub <- Data[, c(xvar, yvar)]
     Data.sub[, yvar] <- factor(Data.sub[, yvar], levels = c( "No.Loan", "Formal",  "Informal", "L.Both"))

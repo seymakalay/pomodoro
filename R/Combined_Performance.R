@@ -4,6 +4,7 @@
 #' @return The output from  \code{\link{Combined_Performance}}.
 #' @export
 #' @examples
+#' \donttest{
 #' library(dplyr)
 #' sample_data <- sample_data[c(1:750),]
 #' m2.xvar0 <- c("sex","married","age","havejob","educ","rural","region","income")
@@ -15,8 +16,7 @@
 #` Sub.CCP.RF <- list(Mdl.1 = CCP.RF,  Mdl.2= NoCCP.RF)
 #` CCP.NoCCP.RF <- Combined_Performance(Sub.CCP.RF)
 #` CCP.NoCCP.RF$Roc$auc
-
-
+#' }
 
 
 

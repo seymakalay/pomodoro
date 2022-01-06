@@ -9,12 +9,15 @@
 #' @importFrom  pROC multiclass.roc
 #' @importFrom stats binomial pnorm predict
 #' @examples
+#' \donttest{
 #' yvar <- c("Loan.Type")
 #' sample_data <- sample_data[c(1:250),]
 #' m2.xvar0 <- c("sex", "married", "age", "havejob", "educ", "rural", "region","income")
 #' BchMk.MLR.1 <- RF_Model(sample_data, c(m2.xvar0, "political.afl", "networth"), yvar)
 #' BchMk.MLR.1$finalModel
 #' BchMk.MLR.1$Roc$auc
+#'  }
+
 
 
 
@@ -29,7 +32,7 @@ RF_Model <- function(Data, xvar, yvar){ # #' @export was deleted
     Data.sub <- Data[, c(xvar, yvar)]
   }
 
-  set.seed(87)
+  #set.seed(87)
   train.set <- createDataPartition(Data.sub[, yvar], p = .80, list = 0)
   Data.sub.train <- Data.sub[ train.set, ]
   Data.sub.test  <- Data.sub[-train.set, ]

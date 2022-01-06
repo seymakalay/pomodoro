@@ -17,7 +17,7 @@ My Hello Word Function
 }
 \examples{
 hello("Seyma")
-\dontrun{
+\donttest{
 hello("Steve")
 }
 }
