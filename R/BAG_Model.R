@@ -1,5 +1,16 @@
 
-#' Title
+#' Bagging Model
+#'
+#' @details Decision trees suffer from high
+#' variance (If we split the training data-set randomly into two parts and set a decision tree to both parts, the results might be quite different).
+#' Bagging is an ensemble procedure which reduces the variance and increases the prediction accuracy of a statistical learning method
+#' by considering many training sets
+#' (\eqn{\hat{f}^{1}(x),\hat{f}^{2}(x),\ldots,\hat{f}^{B}(x)})
+#' from the population. Since we can not have multiple training-sets, from a single training data-set, we can generate
+#' \eqn{B}{B} different bootstrapped training data-sets
+#' (\eqn{\hat{f}^{*1}(x), \hat{f}^{*2}(x), \ldots,\hat{f}^{*B}(x)})
+#' by each \eqn{B}{B} trees and take a majority vote. Therefore, bagging for classification problem  defined as
+#'  \deqn{\hat{f}(x)=arg\max_{k}\hat{f}^{*b}(x)}
 #'
 #' @param Data The name of the Dataset.
 #' @param xvar X variables.

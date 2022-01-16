@@ -2,7 +2,7 @@
 % Please edit documentation in R/GBM_Model.R
 \name{GBM_Model}
 \alias{GBM_Model}
-\title{Title}
+\title{Gradient Boosting Model}
 \usage{
 GBM_Model(Data, xvar, yvar)
 }
@@ -17,7 +17,16 @@ GBM_Model(Data, xvar, yvar)
 The output from  \code{\link{GBM_Model}}.
 }
 \description{
-Title
+Gradient Boosting Model
+}
+\details{
+Unlike bagging trees, boosting does not use bootstrap sampling,
+rather each tree is fit using information from previous trees.
+An event probability of stochastic gradient boosting model is given by
+\deqn{\hat{\pi_i} = \frac{1}{1 + exp[-f(x)]^\prime}}
+ where \eqn{f(x)} is in the range of \eqn{[-\infty,\infty]} and its initial estimate of the model is
+ \eqn{f^{(0)}_i=log(\frac{\pi_{i}}{1-\pi_{i}})},
+ where \eqn{\hat{\pi}} is the estimated sample proportion of a single class from the training set.
 }
 \examples{
 \donttest{

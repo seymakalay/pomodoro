@@ -1,5 +1,19 @@
 
-#' Title
+
+#' Generalized Linear Model
+#'
+#' @details Let \bold{y} be a vector of response variable of accessing credit for each applicant
+#' \eqn{n}{n}, such that \eqn{y_{i}=1}{y_{i} =  1}  if the applicant-\eqn{i}{i}
+#' has access to credit, and zero otherwise. Furthermore, let
+#' let \eqn{\bold{x} = x_{ij}},  where
+#' \eqn{i=1,\ldots,n}{i=1,...,n} and \eqn{j=1,\ldots,p}{j=1,...,p} characteristics of the applicants.
+#' The log-odds can be define as:
+#'
+#'  \deqn{log(\frac{\pi_{i}}{1-\pi_{i}}) = \beta_{0}+\bold{x}_{\bold{i}}\beta = \beta_{0}+\sum_{i=1}^{p}\beta_{i}\bold{x}_{i}}
+#'
+#'  \eqn{\beta_{0}}{\beta_{0}} is the intercept, \eqn{\beta = (\beta_{1},\ldots, \beta_{p})} is
+#'  a \eqn{p} \eqn{x} \eqn{1} vector of coefficients and
+#' 	     \eqn{\bold{x_{i}}}{x_{i}} is the \eqn{i_{th}}{i_{th}} row of  \bold{x}.
 #'
 #' @param Data The name of the Dataset.
 #' @param xvar X variables.
@@ -19,8 +33,6 @@
 #' BchMk.GLM <- GLM_Model(sample_data, c(m2.xvar0, "political.afl", "networth"), yvar)
 #' BchMk.GLM$finalModel
 #' BchMk.GLM$Roc$auc
-
-
 
 
 

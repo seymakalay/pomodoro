@@ -1,5 +1,6 @@
 
-#' Title
+#' Results of the Each Data and Data Splits
+#'
 #' @param DataSet The name of the Dataset.
 #' @param yvar Y variable.
 #' @param exog is a vector to be subtract from the calculation.

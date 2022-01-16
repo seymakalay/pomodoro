@@ -2,7 +2,7 @@
 % Please edit documentation in R/Combined_Performance.R
 \name{Combined_Performance}
 \alias{Combined_Performance}
-\title{Title}
+\title{Combined Performance of the Data Splits}
 \usage{
 Combined_Performance(Sub.Est.Mdls)
 }
@@ -13,7 +13,7 @@ Combined_Performance(Sub.Est.Mdls)
 The output from  \code{\link{Combined_Performance}}.
 }
 \description{
-Title
+Combined Performance of the Data Splits
 }
 \examples{
 \donttest{

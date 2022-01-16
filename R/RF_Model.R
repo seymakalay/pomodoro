@@ -1,5 +1,13 @@
 
-#' Title
+#' Random Forest
+#'
+#' @details
+#' Rather than considering the random sample of \eqn{m}{m} predictors
+#' from the total of \eqn{p}{p} predictors in each split,
+#' random forest does not consider a majority of the \eqn{p}{p} predictors, and considers in each split a
+#' fresh sample of  \eqn{m_{try}}{m_{try}} which we usually set  to \eqn{m_{try} \approx \sqrt{p}}
+#'  Random forests which de-correlate the trees by considering  \eqn{m_{try} \approx \sqrt{p}}
+#'  show an improvement over bagged trees  \eqn{m = p}{m = p}.
 #'
 #' @param Data The name of the Dataset.
 #' @param xvar X variables.
