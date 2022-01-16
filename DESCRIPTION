@@ -1,7 +1,7 @@
 Package: pomodoro
 Type: Package
 Title: Predictive Power of Linear and Tree Modeling
-Version: 3.4.0
+Version: 3.5.0
 Author: Seyma Kalay <seymakalay@hotmail.com>
 Maintainer: Seyma Kalay <seymakalay@hotmail.com>
 Description: Runs generalized and multinominal logistic (GLM and MLM) models, as well as random forest (RF), Bagging (BAG), and Boosting (BOOST). This package prints out to predictive outcomes easy for the selected data and data splits.
