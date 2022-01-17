@@ -3,9 +3,7 @@
 
 # pomodoro
 
-[![GitHub issues](https://img.shields.io/github/issues/seymakalay/pomodoro?style=plastic)](https://github.com/seymakalay/pomodoro/issues)
-
-![CRAN/METACRAN](https://img.shields.io/cran/v/pomodoro?style=plastic)
+[![GitHub issues](https://img.shields.io/github/issues/seymakalay/pomodoro?style=plastic)](https://github.com/seymakalay/pomodoro/issues)![CRAN/METACRAN](https://img.shields.io/cran/v/pomodoro?style=plastic)
 
 The goal of pomodoro is to provide functions to make predictive modeling
 easy.
