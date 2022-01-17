@@ -3,11 +3,6 @@
 
 # pomodoro
 
-<!-- badges: start -->
-
-[![R-CMD-check](https://github.com/seymakalay/pomodoro/workflows/R-CMD-check/badge.svg)](https://github.com/seymakalay/pomodoro/actions)
-<!-- badges: end -->
-
 The goal of pomodoro is to provide functions to make predictive modeling
 easy.
 
