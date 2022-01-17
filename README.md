@@ -2,7 +2,7 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 # pomodoro
-
+[![GitHub issues](https://img.shields.io/github/issues/seymakalay/pomodoro?style=plastic)](https://github.com/seymakalay/pomodoro/issues)
 The goal of pomodoro is to provide functions to make predictive modeling
 easy.
 
