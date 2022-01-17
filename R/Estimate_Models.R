@@ -19,7 +19,7 @@
 #' xadd = "networth", type = "RF", dnames = c("0","1"))
 #' }
 
-
+#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
 Estimate_Models <- function(DataSet, yvar, exog = NULL, xvec, xadd, type, dnames){
 
   Data.All <- DataSet
