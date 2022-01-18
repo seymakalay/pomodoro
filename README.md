@@ -3,7 +3,16 @@
 
 # pomodoro
 
-[![GitHub issues](https://img.shields.io/github/issues/seymakalay/pomodoro?style=plastic)](https://github.com/seymakalay/pomodoro/issues) ![CRAN/METACRAN](https://img.shields.io/cran/v/pomodoro?style=plastic) [![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
+<!-- badges: start -->
+[![R-CMD-check](https://github.com/seymakalay/pomodoro/workflows/R-CMD-check/badge.svg)](https://github.com/seymakalay/pomodoro/actions=plastic)
+![GitHub
+issues](https://img.shields.io/github/issues/seymakalay/pomodoro?style=plastic)
+![CRAN/METACRAN](https://img.shields.io/cran/v/pomodoro?style=plastic)
+![GitHub repo
+size](https://img.shields.io/github/repo-size/seymakalay/pomodoro?style=plastic)
+[![Lifecycle:
+stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
+<!-- badges: end -->
 
 The goal of pomodoro is to provide functions to make predictive modeling
 easy.
