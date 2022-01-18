@@ -154,14 +154,14 @@
 <span class="co">#&gt;                      Number of trees: 500</span>
 <span class="co">#&gt; No. of variables tried at each split: 2</span>
 <span class="co">#&gt; </span>
-<span class="co">#&gt;         OOB estimate of  error rate: 21.95%</span>
+<span class="co">#&gt;         OOB estimate of  error rate: 23.19%</span>
 <span class="co">#&gt; Confusion matrix:</span>
 <span class="co">#&gt;          No.Loan Formal Informal L.Both class.error</span>
-<span class="co">#&gt; No.Loan      282      7        0      0  0.02422145</span>
-<span class="co">#&gt; Formal        25     31        0      0  0.44642857</span>
+<span class="co">#&gt; No.Loan      281      8        0      0  0.02768166</span>
+<span class="co">#&gt; Formal        29     27        0      0  0.51785714</span>
 <span class="co">#&gt; Informal      38      0        0      0  1.00000000</span>
-<span class="co">#&gt; L.Both        12      6        0      0  1.00000000</span>
-<span class="co">#&gt; Multi-class area under the curve: 0.7068</span></code></pre>
+<span class="co">#&gt; L.Both        13      5        0      0  1.00000000</span>
+<span class="co">#&gt; Multi-class area under the curve: 0.7528</span></code></pre>
 <div class="section level3">
 <h3 id="estimate_models">Estimate_Models<a class="anchor" aria-label="anchor" href="#estimate_models"></a>
 </h3>
@@ -377,13 +377,13 @@
 <span class="co">#&gt; </span>
 <span class="co">#&gt; Pre-processing: centered (9), scaled (9) </span>
 <span class="co">#&gt; Resampling: Cross-Validated (10 fold) </span>
-<span class="co">#&gt; Summary of sample sizes: 361, 360, 362, 360, 360, 361, ... </span>
+<span class="co">#&gt; Summary of sample sizes: 361, 360, 362, 360, 361, 363, ... </span>
 <span class="co">#&gt; Resampling results across tuning parameters:</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt;   mtry  Accuracy   Kappa    </span>
-<span class="co">#&gt;   2     0.7832145  0.3738538</span>
-<span class="co">#&gt;   5     0.7585131  0.3539084</span>
-<span class="co">#&gt;   9     0.7484459  0.3356987</span>
+<span class="co">#&gt;   2     0.7687881  0.3274543</span>
+<span class="co">#&gt;   5     0.7613429  0.3257916</span>
+<span class="co">#&gt;   9     0.7564648  0.3220656</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; Accuracy was used to select the optimal model using the largest value.</span>
 <span class="co">#&gt; The final value used for the model was mtry = 2.</span>
@@ -397,13 +397,13 @@
 <span class="co">#&gt; </span>
 <span class="co">#&gt; Pre-processing: centered (9), scaled (9) </span>
 <span class="co">#&gt; Resampling: Cross-Validated (10 fold) </span>
-<span class="co">#&gt; Summary of sample sizes: 269, 270, 269, 271, 268, 270, ... </span>
+<span class="co">#&gt; Summary of sample sizes: 268, 269, 271, 268, 269, 269, ... </span>
 <span class="co">#&gt; Resampling results across tuning parameters:</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt;   mtry  Accuracy   Kappa    </span>
-<span class="co">#&gt;   2     0.7324156  0.1274368</span>
-<span class="co">#&gt;   5     0.7159410  0.1554633</span>
-<span class="co">#&gt;   9     0.7023621  0.1334085</span>
+<span class="co">#&gt;   2     0.7628050  0.2794897</span>
+<span class="co">#&gt;   5     0.7322138  0.2357565</span>
+<span class="co">#&gt;   9     0.7353321  0.2637893</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; Accuracy was used to select the optimal model using the largest value.</span>
 <span class="co">#&gt; The final value used for the model was mtry = 2.</span>
@@ -417,13 +417,13 @@
 <span class="co">#&gt; </span>
 <span class="co">#&gt; Pre-processing: centered (9), scaled (9) </span>
 <span class="co">#&gt; Resampling: Cross-Validated (10 fold) </span>
-<span class="co">#&gt; Summary of sample sizes: 92, 93, 92, 92, 94, 93, ... </span>
+<span class="co">#&gt; Summary of sample sizes: 92, 93, 93, 93, 92, 91, ... </span>
 <span class="co">#&gt; Resampling results across tuning parameters:</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt;   mtry  Accuracy   Kappa    </span>
-<span class="co">#&gt;   2     0.7979798  0.4431690</span>
-<span class="co">#&gt;   5     0.7909091  0.4530267</span>
-<span class="co">#&gt;   9     0.7697980  0.4091837</span>
+<span class="co">#&gt;   2     0.8073232  0.5056960</span>
+<span class="co">#&gt;   5     0.7700505  0.4394970</span>
+<span class="co">#&gt;   9     0.7489394  0.4043823</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; Accuracy was used to select the optimal model using the largest value.</span>
 <span class="co">#&gt; The final value used for the model was mtry = 2.</span></code></pre>
@@ -562,7 +562,7 @@
 <span class="co">#&gt; Aggregating results</span>
 <span class="co">#&gt; Selecting tuning parameters</span>
 <span class="co">#&gt; Fitting mtry = 2 on full training set</span>
-<span class="co">#&gt; Multi-class area under the curve: 0.6997</span></code></pre>
+<span class="co">#&gt; Multi-class area under the curve: 0.7805</span></code></pre>
 </div>
   </main>
 </div>
