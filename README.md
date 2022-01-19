@@ -4,7 +4,7 @@
 # pomodoro
 
 <!-- badges: start -->
-[![R-CMD-check](https://github.com/seymakalay/pomodoro/workflows/R-CMD-check/badge.svg)](https://github.com/seymakalay/pomodoro/actions)
+<!-- [![R-CMD-check](https://github.com/seymakalay/pomodoro/workflows/R-CMD-check/badge.svg)](https://github.com/seymakalay/pomodoro/actions)-->
 ![GitHub
 issues](https://img.shields.io/github/issues/seymakalay/pomodoro)
 [![CRAN
