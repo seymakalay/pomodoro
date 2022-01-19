@@ -179,7 +179,7 @@ fresh sample of  \(m_{try}\) which we usually set  to \(m_{try} \approx \sqrt{p}
 <span class="r-out co"><span class="r-pr">#&gt;</span> - Fold10: mtry=10 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Aggregating results</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Selecting tuning parameters</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Fitting mtry = 6 on full training set</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Fitting mtry = 2 on full training set</span>
 <span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>These variables have zero variances: region</span>
 <span class="r-in"><span class="va">BchMk.MLR.1</span><span class="op">$</span><span class="va">finalModel</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
@@ -187,17 +187,17 @@ fresh sample of  \(m_{try}\) which we usually set  to \(m_{try} \approx \sqrt{p}
 <span class="r-out co"><span class="r-pr">#&gt;</span>  randomForest(formula = Data.sub.train[, yvar] ~ ., data = Data.sub.train) </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                Type of random forest: classification</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                      Number of trees: 500</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> No. of variables tried at each split: 6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> No. of variables tried at each split: 2</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>         OOB estimate of  error rate: 27.36%</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Confusion matrix:</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>          No.Loan Formal Informal L.Both class.error</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> No.Loan      119     11        2      2   0.1119403</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Formal        15     26        0      0   0.3658537</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Informal      14      0        1      1   0.9375000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> L.Both         4      4        2      0   1.0000000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> No.Loan      123     10        1      0  0.08208955</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Formal        18     23        0      0  0.43902439</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Informal      16      0        0      0  1.00000000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> L.Both         5      4        1      0  1.00000000</span>
 <span class="r-in"><span class="va">BchMk.MLR.1</span><span class="op">$</span><span class="va">Roc</span><span class="op">$</span><span class="va">auc</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Multi-class area under the curve: 0.692</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Multi-class area under the curve: 0.8011</span>
 <span class="r-in"> <span class="co"># }</span></span>
 </code></pre></div>
     </div>
