@@ -71,7 +71,7 @@
       <img src="" class="logo" alt=""><h1>Pomodoro_Vignette</h1>
                         <h4 data-toc-skip class="author">Seyma Kalay</h4>
             
-            <h4 data-toc-skip class="date">2022-01-18</h4>
+            <h4 data-toc-skip class="date">2022-01-19</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/seymakalay/pomodoro/blob/HEAD/vignettes/Pomodoro_Vignette.Rmd" class="external-link"><code>vignettes/Pomodoro_Vignette.Rmd</code></a></small>
       <div class="d-none name"><code>Pomodoro_Vignette.Rmd</code></div>
@@ -155,14 +155,14 @@
 <span class="co">#&gt;                      Number of trees: 500</span>
 <span class="co">#&gt; No. of variables tried at each split: 2</span>
 <span class="co">#&gt; </span>
-<span class="co">#&gt;         OOB estimate of  error rate: 20.95%</span>
+<span class="co">#&gt;         OOB estimate of  error rate: 23.44%</span>
 <span class="co">#&gt; Confusion matrix:</span>
 <span class="co">#&gt;          No.Loan Formal Informal L.Both class.error</span>
-<span class="co">#&gt; No.Loan      283      6        0      0  0.02076125</span>
-<span class="co">#&gt; Formal        22     34        0      0  0.39285714</span>
+<span class="co">#&gt; No.Loan      282      7        0      0  0.02422145</span>
+<span class="co">#&gt; Formal        31     25        0      0  0.55357143</span>
 <span class="co">#&gt; Informal      38      0        0      0  1.00000000</span>
-<span class="co">#&gt; L.Both        11      7        0      0  1.00000000</span>
-<span class="co">#&gt; Multi-class area under the curve: 0.6083</span></code></pre>
+<span class="co">#&gt; L.Both        14      4        0      0  1.00000000</span>
+<span class="co">#&gt; Multi-class area under the curve: 0.738</span></code></pre>
 <div class="section level3">
 <h3 id="estimate_models">Estimate_Models<a class="anchor" aria-label="anchor" href="#estimate_models"></a>
 </h3>
@@ -301,17 +301,11 @@
 <span class="co">#&gt; Aggregating results</span>
 <span class="co">#&gt; Selecting tuning parameters</span>
 <span class="co">#&gt; Fitting mtry = 2 on full training set</span>
-<span class="co">#&gt; + Fold01: mtry=2</span>
-<span class="co">#&gt; Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut =</span>
-<span class="co">#&gt; 10, : These variables have zero variances: region</span>
+<span class="co">#&gt; + Fold01: mtry=2 </span>
 <span class="co">#&gt; - Fold01: mtry=2 </span>
-<span class="co">#&gt; + Fold01: mtry=5</span>
-<span class="co">#&gt; Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut =</span>
-<span class="co">#&gt; 10, : These variables have zero variances: region</span>
+<span class="co">#&gt; + Fold01: mtry=5 </span>
 <span class="co">#&gt; - Fold01: mtry=5 </span>
-<span class="co">#&gt; + Fold01: mtry=9</span>
-<span class="co">#&gt; Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut =</span>
-<span class="co">#&gt; 10, : These variables have zero variances: region</span>
+<span class="co">#&gt; + Fold01: mtry=9 </span>
 <span class="co">#&gt; - Fold01: mtry=9 </span>
 <span class="co">#&gt; + Fold02: mtry=2 </span>
 <span class="co">#&gt; - Fold02: mtry=2 </span>
@@ -319,11 +313,17 @@
 <span class="co">#&gt; - Fold02: mtry=5 </span>
 <span class="co">#&gt; + Fold02: mtry=9 </span>
 <span class="co">#&gt; - Fold02: mtry=9 </span>
-<span class="co">#&gt; + Fold03: mtry=2 </span>
+<span class="co">#&gt; + Fold03: mtry=2</span>
+<span class="co">#&gt; Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut =</span>
+<span class="co">#&gt; 10, : These variables have zero variances: region</span>
 <span class="co">#&gt; - Fold03: mtry=2 </span>
-<span class="co">#&gt; + Fold03: mtry=5 </span>
+<span class="co">#&gt; + Fold03: mtry=5</span>
+<span class="co">#&gt; Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut =</span>
+<span class="co">#&gt; 10, : These variables have zero variances: region</span>
 <span class="co">#&gt; - Fold03: mtry=5 </span>
-<span class="co">#&gt; + Fold03: mtry=9 </span>
+<span class="co">#&gt; + Fold03: mtry=9</span>
+<span class="co">#&gt; Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut =</span>
+<span class="co">#&gt; 10, : These variables have zero variances: region</span>
 <span class="co">#&gt; - Fold03: mtry=9 </span>
 <span class="co">#&gt; + Fold04: mtry=2 </span>
 <span class="co">#&gt; - Fold04: mtry=2 </span>
@@ -369,7 +369,7 @@
 <span class="co">#&gt; - Fold10: mtry=9 </span>
 <span class="co">#&gt; Aggregating results</span>
 <span class="co">#&gt; Selecting tuning parameters</span>
-<span class="co">#&gt; Fitting mtry = 5 on full training set</span>
+<span class="co">#&gt; Fitting mtry = 2 on full training set</span>
 <span class="co">#&gt; Warning in multiclass.roc.multivariate(response, predictor, levels, percent, :</span>
 <span class="co">#&gt; No observation for response level(s): Informal</span>
 <span class="co">#&gt; Warning in multiclass.roc.multivariate(response, predictor, levels, percent, :</span>
@@ -384,13 +384,13 @@
 <span class="co">#&gt; </span>
 <span class="co">#&gt; Pre-processing: centered (9), scaled (9) </span>
 <span class="co">#&gt; Resampling: Cross-Validated (10 fold) </span>
-<span class="co">#&gt; Summary of sample sizes: 360, 362, 362, 361, 361, 361, ... </span>
+<span class="co">#&gt; Summary of sample sizes: 360, 361, 361, 362, 362, 360, ... </span>
 <span class="co">#&gt; Resampling results across tuning parameters:</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt;   mtry  Accuracy   Kappa    </span>
-<span class="co">#&gt;   2     0.7607458  0.3004621</span>
-<span class="co">#&gt;   5     0.7434256  0.2786746</span>
-<span class="co">#&gt;   9     0.7434256  0.2963067</span>
+<span class="co">#&gt;   2     0.7731785  0.3424624</span>
+<span class="co">#&gt;   5     0.7583583  0.3320018</span>
+<span class="co">#&gt;   9     0.7532942  0.3303738</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; Accuracy was used to select the optimal model using the largest value.</span>
 <span class="co">#&gt; The final value used for the model was mtry = 2.</span>
@@ -404,13 +404,13 @@
 <span class="co">#&gt; </span>
 <span class="co">#&gt; Pre-processing: centered (9), scaled (9) </span>
 <span class="co">#&gt; Resampling: Cross-Validated (10 fold) </span>
-<span class="co">#&gt; Summary of sample sizes: 271, 269, 270, 269, 269, 269, ... </span>
+<span class="co">#&gt; Summary of sample sizes: 268, 269, 268, 267, 269, 269, ... </span>
 <span class="co">#&gt; Resampling results across tuning parameters:</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt;   mtry  Accuracy   Kappa    </span>
-<span class="co">#&gt;   2     0.7399415  0.1798451</span>
-<span class="co">#&gt;   5     0.7364634  0.2012604</span>
-<span class="co">#&gt;   9     0.7198686  0.1629396</span>
+<span class="co">#&gt;   2     0.7331149  0.1689393</span>
+<span class="co">#&gt;   5     0.7131994  0.1482996</span>
+<span class="co">#&gt;   9     0.7065253  0.1352296</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; Accuracy was used to select the optimal model using the largest value.</span>
 <span class="co">#&gt; The final value used for the model was mtry = 2.</span>
@@ -424,16 +424,16 @@
 <span class="co">#&gt; </span>
 <span class="co">#&gt; Pre-processing: centered (9), scaled (9) </span>
 <span class="co">#&gt; Resampling: Cross-Validated (10 fold) </span>
-<span class="co">#&gt; Summary of sample sizes: 92, 92, 94, 92, 92, 93, ... </span>
+<span class="co">#&gt; Summary of sample sizes: 93, 94, 93, 93, 94, 91, ... </span>
 <span class="co">#&gt; Resampling results across tuning parameters:</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt;   mtry  Accuracy   Kappa    </span>
-<span class="co">#&gt;   2     0.7984848  0.4742973</span>
-<span class="co">#&gt;   5     0.8295960  0.5487312</span>
-<span class="co">#&gt;   9     0.8014141  0.4961340</span>
+<span class="co">#&gt;   2     0.7793939  0.4362078</span>
+<span class="co">#&gt;   5     0.7581313  0.3788220</span>
+<span class="co">#&gt;   9     0.7464646  0.3857772</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; Accuracy was used to select the optimal model using the largest value.</span>
-<span class="co">#&gt; The final value used for the model was mtry = 5.</span></code></pre>
+<span class="co">#&gt; The final value used for the model was mtry = 2.</span></code></pre>
 </div>
 <div class="section level3">
 <h3 id="combined_performance">Combined_Performance<a class="anchor" aria-label="anchor" href="#combined_performance"></a>
@@ -569,7 +569,7 @@
 <span class="co">#&gt; Aggregating results</span>
 <span class="co">#&gt; Selecting tuning parameters</span>
 <span class="co">#&gt; Fitting mtry = 2 on full training set</span>
-<span class="co">#&gt; Multi-class area under the curve: 0.7225</span></code></pre>
+<span class="co">#&gt; Multi-class area under the curve: 0.7102</span></code></pre>
 </div>
   </main>
 </div>
