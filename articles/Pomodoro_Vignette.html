@@ -26,7 +26,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">pomodoro</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">3.5.1</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">3.5.2</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -70,7 +70,7 @@
       <img src="" class="logo" alt=""><h1>Pomodoro_Vignette</h1>
                         <h4 data-toc-skip class="author">Seyma Kalay</h4>
             
-            <h4 data-toc-skip class="date">2022-01-19</h4>
+            <h4 data-toc-skip class="date">2022-03-13</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/seymakalay/pomodoro/blob/HEAD/vignettes/Pomodoro_Vignette.Rmd" class="external-link"><code>vignettes/Pomodoro_Vignette.Rmd</code></a></small>
       <div class="d-none name"><code>Pomodoro_Vignette.Rmd</code></div>
@@ -86,483 +86,656 @@
 <span class="co">#&gt; Loading required package: lattice</span>
 <span class="co">#&gt; + Fold01: mtry= 2 </span>
 <span class="co">#&gt; - Fold01: mtry= 2 </span>
-<span class="co">#&gt; + Fold01: mtry= 6 </span>
-<span class="co">#&gt; - Fold01: mtry= 6 </span>
-<span class="co">#&gt; + Fold01: mtry=10 </span>
-<span class="co">#&gt; - Fold01: mtry=10 </span>
+<span class="co">#&gt; + Fold01: mtry= 7 </span>
+<span class="co">#&gt; - Fold01: mtry= 7 </span>
+<span class="co">#&gt; + Fold01: mtry=12 </span>
+<span class="co">#&gt; - Fold01: mtry=12 </span>
 <span class="co">#&gt; + Fold02: mtry= 2 </span>
 <span class="co">#&gt; - Fold02: mtry= 2 </span>
-<span class="co">#&gt; + Fold02: mtry= 6 </span>
-<span class="co">#&gt; - Fold02: mtry= 6 </span>
-<span class="co">#&gt; + Fold02: mtry=10 </span>
-<span class="co">#&gt; - Fold02: mtry=10 </span>
+<span class="co">#&gt; + Fold02: mtry= 7 </span>
+<span class="co">#&gt; - Fold02: mtry= 7 </span>
+<span class="co">#&gt; + Fold02: mtry=12 </span>
+<span class="co">#&gt; - Fold02: mtry=12 </span>
 <span class="co">#&gt; + Fold03: mtry= 2 </span>
 <span class="co">#&gt; - Fold03: mtry= 2 </span>
-<span class="co">#&gt; + Fold03: mtry= 6 </span>
-<span class="co">#&gt; - Fold03: mtry= 6 </span>
-<span class="co">#&gt; + Fold03: mtry=10 </span>
-<span class="co">#&gt; - Fold03: mtry=10 </span>
+<span class="co">#&gt; + Fold03: mtry= 7 </span>
+<span class="co">#&gt; - Fold03: mtry= 7 </span>
+<span class="co">#&gt; + Fold03: mtry=12 </span>
+<span class="co">#&gt; - Fold03: mtry=12 </span>
 <span class="co">#&gt; + Fold04: mtry= 2 </span>
 <span class="co">#&gt; - Fold04: mtry= 2 </span>
-<span class="co">#&gt; + Fold04: mtry= 6 </span>
-<span class="co">#&gt; - Fold04: mtry= 6 </span>
-<span class="co">#&gt; + Fold04: mtry=10 </span>
-<span class="co">#&gt; - Fold04: mtry=10 </span>
+<span class="co">#&gt; + Fold04: mtry= 7 </span>
+<span class="co">#&gt; - Fold04: mtry= 7 </span>
+<span class="co">#&gt; + Fold04: mtry=12 </span>
+<span class="co">#&gt; - Fold04: mtry=12 </span>
 <span class="co">#&gt; + Fold05: mtry= 2 </span>
 <span class="co">#&gt; - Fold05: mtry= 2 </span>
-<span class="co">#&gt; + Fold05: mtry= 6 </span>
-<span class="co">#&gt; - Fold05: mtry= 6 </span>
-<span class="co">#&gt; + Fold05: mtry=10 </span>
-<span class="co">#&gt; - Fold05: mtry=10 </span>
+<span class="co">#&gt; + Fold05: mtry= 7 </span>
+<span class="co">#&gt; - Fold05: mtry= 7 </span>
+<span class="co">#&gt; + Fold05: mtry=12 </span>
+<span class="co">#&gt; - Fold05: mtry=12 </span>
 <span class="co">#&gt; + Fold06: mtry= 2 </span>
 <span class="co">#&gt; - Fold06: mtry= 2 </span>
-<span class="co">#&gt; + Fold06: mtry= 6 </span>
-<span class="co">#&gt; - Fold06: mtry= 6 </span>
-<span class="co">#&gt; + Fold06: mtry=10 </span>
-<span class="co">#&gt; - Fold06: mtry=10 </span>
+<span class="co">#&gt; + Fold06: mtry= 7 </span>
+<span class="co">#&gt; - Fold06: mtry= 7 </span>
+<span class="co">#&gt; + Fold06: mtry=12 </span>
+<span class="co">#&gt; - Fold06: mtry=12 </span>
 <span class="co">#&gt; + Fold07: mtry= 2 </span>
 <span class="co">#&gt; - Fold07: mtry= 2 </span>
-<span class="co">#&gt; + Fold07: mtry= 6 </span>
-<span class="co">#&gt; - Fold07: mtry= 6 </span>
-<span class="co">#&gt; + Fold07: mtry=10 </span>
-<span class="co">#&gt; - Fold07: mtry=10 </span>
+<span class="co">#&gt; + Fold07: mtry= 7 </span>
+<span class="co">#&gt; - Fold07: mtry= 7 </span>
+<span class="co">#&gt; + Fold07: mtry=12 </span>
+<span class="co">#&gt; - Fold07: mtry=12 </span>
 <span class="co">#&gt; + Fold08: mtry= 2 </span>
 <span class="co">#&gt; - Fold08: mtry= 2 </span>
-<span class="co">#&gt; + Fold08: mtry= 6 </span>
-<span class="co">#&gt; - Fold08: mtry= 6 </span>
-<span class="co">#&gt; + Fold08: mtry=10 </span>
-<span class="co">#&gt; - Fold08: mtry=10 </span>
+<span class="co">#&gt; + Fold08: mtry= 7 </span>
+<span class="co">#&gt; - Fold08: mtry= 7 </span>
+<span class="co">#&gt; + Fold08: mtry=12 </span>
+<span class="co">#&gt; - Fold08: mtry=12 </span>
 <span class="co">#&gt; + Fold09: mtry= 2 </span>
 <span class="co">#&gt; - Fold09: mtry= 2 </span>
-<span class="co">#&gt; + Fold09: mtry= 6 </span>
-<span class="co">#&gt; - Fold09: mtry= 6 </span>
-<span class="co">#&gt; + Fold09: mtry=10 </span>
-<span class="co">#&gt; - Fold09: mtry=10 </span>
+<span class="co">#&gt; + Fold09: mtry= 7 </span>
+<span class="co">#&gt; - Fold09: mtry= 7 </span>
+<span class="co">#&gt; + Fold09: mtry=12 </span>
+<span class="co">#&gt; - Fold09: mtry=12 </span>
 <span class="co">#&gt; + Fold10: mtry= 2 </span>
 <span class="co">#&gt; - Fold10: mtry= 2 </span>
-<span class="co">#&gt; + Fold10: mtry= 6 </span>
-<span class="co">#&gt; - Fold10: mtry= 6 </span>
-<span class="co">#&gt; + Fold10: mtry=10 </span>
-<span class="co">#&gt; - Fold10: mtry=10 </span>
+<span class="co">#&gt; + Fold10: mtry= 7 </span>
+<span class="co">#&gt; - Fold10: mtry= 7 </span>
+<span class="co">#&gt; + Fold10: mtry=12 </span>
+<span class="co">#&gt; - Fold10: mtry=12 </span>
 <span class="co">#&gt; Aggregating results</span>
 <span class="co">#&gt; Selecting tuning parameters</span>
 <span class="co">#&gt; Fitting mtry = 2 on full training set</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; Call:</span>
-<span class="co">#&gt;  randomForest(formula = Data.sub.train[, yvar] ~ ., data = Data.sub.train) </span>
-<span class="co">#&gt;                Type of random forest: classification</span>
-<span class="co">#&gt;                      Number of trees: 500</span>
-<span class="co">#&gt; No. of variables tried at each split: 2</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt;         OOB estimate of  error rate: 23.44%</span>
-<span class="co">#&gt; Confusion matrix:</span>
-<span class="co">#&gt;          No.Loan Formal Informal L.Both class.error</span>
-<span class="co">#&gt; No.Loan      282      7        0      0  0.02422145</span>
-<span class="co">#&gt; Formal        31     25        0      0  0.55357143</span>
-<span class="co">#&gt; Informal      38      0        0      0  1.00000000</span>
-<span class="co">#&gt; L.Both        13      5        0      0  1.00000000</span>
-<span class="co">#&gt; Multi-class area under the curve: 0.7177</span></code></pre>
+<span class="co">#&gt; Multi-class area under the curve: 0.7472</span></code></pre>
 <div class="section level3">
 <h3 id="estimate_models">Estimate_Models<a class="anchor" aria-label="anchor" href="#estimate_models"></a>
 </h3>
 <p>Estimate_Models function considers <code>exog</code> and <code>xadd</code> variables and set multiple models based on the selected <code>exog</code> and <code>xadd</code>. On the one hand <code>exog</code> is subtract the selected vector from the dataset and run the model for all the dataset and for the splits of the <code>exog</code>. On the other hand <code>xadd</code> add the selected vectors and run the model. Where the <code>dnames</code> are the unique values in <code>exog</code> this is to save the model estimates by their name.</p>
-<pre><code><span class="co">#&gt; </span>
-<span class="co">#&gt; Attaching package: 'dplyr'</span>
-<span class="co">#&gt; The following objects are masked from 'package:stats':</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt;     filter, lag</span>
-<span class="co">#&gt; The following objects are masked from 'package:base':</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt;     intersect, setdiff, setequal, union</span>
-<span class="co">#&gt; + Fold01: mtry=2 </span>
-<span class="co">#&gt; - Fold01: mtry=2 </span>
-<span class="co">#&gt; + Fold01: mtry=5 </span>
-<span class="co">#&gt; - Fold01: mtry=5 </span>
-<span class="co">#&gt; + Fold01: mtry=9 </span>
-<span class="co">#&gt; - Fold01: mtry=9 </span>
-<span class="co">#&gt; + Fold02: mtry=2 </span>
-<span class="co">#&gt; - Fold02: mtry=2 </span>
-<span class="co">#&gt; + Fold02: mtry=5 </span>
-<span class="co">#&gt; - Fold02: mtry=5 </span>
-<span class="co">#&gt; + Fold02: mtry=9 </span>
-<span class="co">#&gt; - Fold02: mtry=9 </span>
-<span class="co">#&gt; + Fold03: mtry=2 </span>
-<span class="co">#&gt; - Fold03: mtry=2 </span>
-<span class="co">#&gt; + Fold03: mtry=5 </span>
-<span class="co">#&gt; - Fold03: mtry=5 </span>
-<span class="co">#&gt; + Fold03: mtry=9 </span>
-<span class="co">#&gt; - Fold03: mtry=9 </span>
-<span class="co">#&gt; + Fold04: mtry=2 </span>
-<span class="co">#&gt; - Fold04: mtry=2 </span>
-<span class="co">#&gt; + Fold04: mtry=5 </span>
-<span class="co">#&gt; - Fold04: mtry=5 </span>
-<span class="co">#&gt; + Fold04: mtry=9 </span>
-<span class="co">#&gt; - Fold04: mtry=9 </span>
-<span class="co">#&gt; + Fold05: mtry=2 </span>
-<span class="co">#&gt; - Fold05: mtry=2 </span>
-<span class="co">#&gt; + Fold05: mtry=5 </span>
-<span class="co">#&gt; - Fold05: mtry=5 </span>
-<span class="co">#&gt; + Fold05: mtry=9 </span>
-<span class="co">#&gt; - Fold05: mtry=9 </span>
-<span class="co">#&gt; + Fold06: mtry=2 </span>
-<span class="co">#&gt; - Fold06: mtry=2 </span>
-<span class="co">#&gt; + Fold06: mtry=5 </span>
-<span class="co">#&gt; - Fold06: mtry=5 </span>
-<span class="co">#&gt; + Fold06: mtry=9 </span>
-<span class="co">#&gt; - Fold06: mtry=9 </span>
-<span class="co">#&gt; + Fold07: mtry=2 </span>
-<span class="co">#&gt; - Fold07: mtry=2 </span>
-<span class="co">#&gt; + Fold07: mtry=5 </span>
-<span class="co">#&gt; - Fold07: mtry=5 </span>
-<span class="co">#&gt; + Fold07: mtry=9 </span>
-<span class="co">#&gt; - Fold07: mtry=9 </span>
-<span class="co">#&gt; + Fold08: mtry=2 </span>
-<span class="co">#&gt; - Fold08: mtry=2 </span>
-<span class="co">#&gt; + Fold08: mtry=5 </span>
-<span class="co">#&gt; - Fold08: mtry=5 </span>
-<span class="co">#&gt; + Fold08: mtry=9 </span>
-<span class="co">#&gt; - Fold08: mtry=9 </span>
-<span class="co">#&gt; + Fold09: mtry=2 </span>
-<span class="co">#&gt; - Fold09: mtry=2 </span>
-<span class="co">#&gt; + Fold09: mtry=5 </span>
-<span class="co">#&gt; - Fold09: mtry=5 </span>
-<span class="co">#&gt; + Fold09: mtry=9 </span>
-<span class="co">#&gt; - Fold09: mtry=9 </span>
-<span class="co">#&gt; + Fold10: mtry=2 </span>
-<span class="co">#&gt; - Fold10: mtry=2 </span>
-<span class="co">#&gt; + Fold10: mtry=5 </span>
-<span class="co">#&gt; - Fold10: mtry=5 </span>
-<span class="co">#&gt; + Fold10: mtry=9 </span>
-<span class="co">#&gt; - Fold10: mtry=9 </span>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">sample_data</span> <span class="op">&lt;-</span> <span class="va">sample_data</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">750</span><span class="op">)</span>,<span class="op">]</span>
+<span class="va">yvar</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Loan.Type"</span><span class="op">)</span>
+<span class="va">xvar</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"sex"</span>, <span class="st">"married"</span>, <span class="st">"age"</span>, <span class="st">"havejob"</span>, <span class="st">"educ"</span>, <span class="st">"political.afl"</span>,
+<span class="st">"rural"</span>, <span class="st">"region"</span>, <span class="st">"fin.intermdiaries"</span>, <span class="st">"fin.knowldge"</span>, <span class="st">"income"</span><span class="op">)</span>
+<span class="va">CCP.RF</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/Estimate_Models.html">Estimate_Models</a></span><span class="op">(</span><span class="va">sample_data</span>, <span class="va">yvar</span>, xvec <span class="op">=</span> <span class="va">xvar</span>, exog <span class="op">=</span> <span class="st">"political.afl"</span>,
+xadd <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"networth"</span>, <span class="st">"networth_homequity"</span>, <span class="st">"liquid.assets"</span><span class="op">)</span>,
+type <span class="op">=</span> <span class="st">"RF"</span>, dnames <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"0"</span>,<span class="st">"1"</span><span class="op">)</span><span class="op">)</span>
+<span class="co">#&gt; + Fold01: mtry= 2 </span>
+<span class="co">#&gt; - Fold01: mtry= 2 </span>
+<span class="co">#&gt; + Fold01: mtry= 6 </span>
+<span class="co">#&gt; - Fold01: mtry= 6 </span>
+<span class="co">#&gt; + Fold01: mtry=11 </span>
+<span class="co">#&gt; - Fold01: mtry=11 </span>
+<span class="co">#&gt; + Fold02: mtry= 2 </span>
+<span class="co">#&gt; - Fold02: mtry= 2 </span>
+<span class="co">#&gt; + Fold02: mtry= 6 </span>
+<span class="co">#&gt; - Fold02: mtry= 6 </span>
+<span class="co">#&gt; + Fold02: mtry=11 </span>
+<span class="co">#&gt; - Fold02: mtry=11 </span>
+<span class="co">#&gt; + Fold03: mtry= 2 </span>
+<span class="co">#&gt; - Fold03: mtry= 2 </span>
+<span class="co">#&gt; + Fold03: mtry= 6 </span>
+<span class="co">#&gt; - Fold03: mtry= 6 </span>
+<span class="co">#&gt; + Fold03: mtry=11 </span>
+<span class="co">#&gt; - Fold03: mtry=11 </span>
+<span class="co">#&gt; + Fold04: mtry= 2 </span>
+<span class="co">#&gt; - Fold04: mtry= 2 </span>
+<span class="co">#&gt; + Fold04: mtry= 6 </span>
+<span class="co">#&gt; - Fold04: mtry= 6 </span>
+<span class="co">#&gt; + Fold04: mtry=11 </span>
+<span class="co">#&gt; - Fold04: mtry=11 </span>
+<span class="co">#&gt; + Fold05: mtry= 2 </span>
+<span class="co">#&gt; - Fold05: mtry= 2 </span>
+<span class="co">#&gt; + Fold05: mtry= 6 </span>
+<span class="co">#&gt; - Fold05: mtry= 6 </span>
+<span class="co">#&gt; + Fold05: mtry=11 </span>
+<span class="co">#&gt; - Fold05: mtry=11 </span>
+<span class="co">#&gt; + Fold06: mtry= 2 </span>
+<span class="co">#&gt; - Fold06: mtry= 2 </span>
+<span class="co">#&gt; + Fold06: mtry= 6 </span>
+<span class="co">#&gt; - Fold06: mtry= 6 </span>
+<span class="co">#&gt; + Fold06: mtry=11 </span>
+<span class="co">#&gt; - Fold06: mtry=11 </span>
+<span class="co">#&gt; + Fold07: mtry= 2 </span>
+<span class="co">#&gt; - Fold07: mtry= 2 </span>
+<span class="co">#&gt; + Fold07: mtry= 6 </span>
+<span class="co">#&gt; - Fold07: mtry= 6 </span>
+<span class="co">#&gt; + Fold07: mtry=11 </span>
+<span class="co">#&gt; - Fold07: mtry=11 </span>
+<span class="co">#&gt; + Fold08: mtry= 2 </span>
+<span class="co">#&gt; - Fold08: mtry= 2 </span>
+<span class="co">#&gt; + Fold08: mtry= 6 </span>
+<span class="co">#&gt; - Fold08: mtry= 6 </span>
+<span class="co">#&gt; + Fold08: mtry=11 </span>
+<span class="co">#&gt; - Fold08: mtry=11 </span>
+<span class="co">#&gt; + Fold09: mtry= 2 </span>
+<span class="co">#&gt; - Fold09: mtry= 2 </span>
+<span class="co">#&gt; + Fold09: mtry= 6 </span>
+<span class="co">#&gt; - Fold09: mtry= 6 </span>
+<span class="co">#&gt; + Fold09: mtry=11 </span>
+<span class="co">#&gt; - Fold09: mtry=11 </span>
+<span class="co">#&gt; + Fold10: mtry= 2 </span>
+<span class="co">#&gt; - Fold10: mtry= 2 </span>
+<span class="co">#&gt; + Fold10: mtry= 6 </span>
+<span class="co">#&gt; - Fold10: mtry= 6 </span>
+<span class="co">#&gt; + Fold10: mtry=11 </span>
+<span class="co">#&gt; - Fold10: mtry=11 </span>
 <span class="co">#&gt; Aggregating results</span>
 <span class="co">#&gt; Selecting tuning parameters</span>
 <span class="co">#&gt; Fitting mtry = 2 on full training set</span>
-<span class="co">#&gt; + Fold01: mtry=2 </span>
-<span class="co">#&gt; - Fold01: mtry=2 </span>
-<span class="co">#&gt; + Fold01: mtry=5 </span>
-<span class="co">#&gt; - Fold01: mtry=5 </span>
-<span class="co">#&gt; + Fold01: mtry=9 </span>
-<span class="co">#&gt; - Fold01: mtry=9 </span>
-<span class="co">#&gt; + Fold02: mtry=2 </span>
-<span class="co">#&gt; - Fold02: mtry=2 </span>
-<span class="co">#&gt; + Fold02: mtry=5 </span>
-<span class="co">#&gt; - Fold02: mtry=5 </span>
-<span class="co">#&gt; + Fold02: mtry=9 </span>
-<span class="co">#&gt; - Fold02: mtry=9 </span>
-<span class="co">#&gt; + Fold03: mtry=2 </span>
-<span class="co">#&gt; - Fold03: mtry=2 </span>
-<span class="co">#&gt; + Fold03: mtry=5 </span>
-<span class="co">#&gt; - Fold03: mtry=5 </span>
-<span class="co">#&gt; + Fold03: mtry=9 </span>
-<span class="co">#&gt; - Fold03: mtry=9 </span>
-<span class="co">#&gt; + Fold04: mtry=2 </span>
-<span class="co">#&gt; - Fold04: mtry=2 </span>
-<span class="co">#&gt; + Fold04: mtry=5 </span>
-<span class="co">#&gt; - Fold04: mtry=5 </span>
-<span class="co">#&gt; + Fold04: mtry=9 </span>
-<span class="co">#&gt; - Fold04: mtry=9 </span>
-<span class="co">#&gt; + Fold05: mtry=2 </span>
-<span class="co">#&gt; - Fold05: mtry=2 </span>
-<span class="co">#&gt; + Fold05: mtry=5 </span>
-<span class="co">#&gt; - Fold05: mtry=5 </span>
-<span class="co">#&gt; + Fold05: mtry=9 </span>
-<span class="co">#&gt; - Fold05: mtry=9 </span>
-<span class="co">#&gt; + Fold06: mtry=2 </span>
-<span class="co">#&gt; - Fold06: mtry=2 </span>
-<span class="co">#&gt; + Fold06: mtry=5 </span>
-<span class="co">#&gt; - Fold06: mtry=5 </span>
-<span class="co">#&gt; + Fold06: mtry=9 </span>
-<span class="co">#&gt; - Fold06: mtry=9 </span>
-<span class="co">#&gt; + Fold07: mtry=2 </span>
-<span class="co">#&gt; - Fold07: mtry=2 </span>
-<span class="co">#&gt; + Fold07: mtry=5 </span>
-<span class="co">#&gt; - Fold07: mtry=5 </span>
-<span class="co">#&gt; + Fold07: mtry=9 </span>
-<span class="co">#&gt; - Fold07: mtry=9 </span>
-<span class="co">#&gt; + Fold08: mtry=2 </span>
-<span class="co">#&gt; - Fold08: mtry=2 </span>
-<span class="co">#&gt; + Fold08: mtry=5 </span>
-<span class="co">#&gt; - Fold08: mtry=5 </span>
-<span class="co">#&gt; + Fold08: mtry=9 </span>
-<span class="co">#&gt; - Fold08: mtry=9 </span>
-<span class="co">#&gt; + Fold09: mtry=2 </span>
-<span class="co">#&gt; - Fold09: mtry=2 </span>
-<span class="co">#&gt; + Fold09: mtry=5 </span>
-<span class="co">#&gt; - Fold09: mtry=5 </span>
-<span class="co">#&gt; + Fold09: mtry=9 </span>
-<span class="co">#&gt; - Fold09: mtry=9 </span>
-<span class="co">#&gt; + Fold10: mtry=2 </span>
-<span class="co">#&gt; - Fold10: mtry=2 </span>
-<span class="co">#&gt; + Fold10: mtry=5 </span>
-<span class="co">#&gt; - Fold10: mtry=5 </span>
-<span class="co">#&gt; + Fold10: mtry=9 </span>
-<span class="co">#&gt; - Fold10: mtry=9 </span>
+<span class="co">#&gt; + Fold01: mtry= 2 </span>
+<span class="co">#&gt; - Fold01: mtry= 2 </span>
+<span class="co">#&gt; + Fold01: mtry= 6 </span>
+<span class="co">#&gt; - Fold01: mtry= 6 </span>
+<span class="co">#&gt; + Fold01: mtry=11 </span>
+<span class="co">#&gt; - Fold01: mtry=11 </span>
+<span class="co">#&gt; + Fold02: mtry= 2 </span>
+<span class="co">#&gt; - Fold02: mtry= 2 </span>
+<span class="co">#&gt; + Fold02: mtry= 6 </span>
+<span class="co">#&gt; - Fold02: mtry= 6 </span>
+<span class="co">#&gt; + Fold02: mtry=11 </span>
+<span class="co">#&gt; - Fold02: mtry=11 </span>
+<span class="co">#&gt; + Fold03: mtry= 2 </span>
+<span class="co">#&gt; - Fold03: mtry= 2 </span>
+<span class="co">#&gt; + Fold03: mtry= 6 </span>
+<span class="co">#&gt; - Fold03: mtry= 6 </span>
+<span class="co">#&gt; + Fold03: mtry=11 </span>
+<span class="co">#&gt; - Fold03: mtry=11 </span>
+<span class="co">#&gt; + Fold04: mtry= 2 </span>
+<span class="co">#&gt; - Fold04: mtry= 2 </span>
+<span class="co">#&gt; + Fold04: mtry= 6 </span>
+<span class="co">#&gt; - Fold04: mtry= 6 </span>
+<span class="co">#&gt; + Fold04: mtry=11 </span>
+<span class="co">#&gt; - Fold04: mtry=11 </span>
+<span class="co">#&gt; + Fold05: mtry= 2 </span>
+<span class="co">#&gt; - Fold05: mtry= 2 </span>
+<span class="co">#&gt; + Fold05: mtry= 6 </span>
+<span class="co">#&gt; - Fold05: mtry= 6 </span>
+<span class="co">#&gt; + Fold05: mtry=11 </span>
+<span class="co">#&gt; - Fold05: mtry=11 </span>
+<span class="co">#&gt; + Fold06: mtry= 2 </span>
+<span class="co">#&gt; - Fold06: mtry= 2 </span>
+<span class="co">#&gt; + Fold06: mtry= 6 </span>
+<span class="co">#&gt; - Fold06: mtry= 6 </span>
+<span class="co">#&gt; + Fold06: mtry=11 </span>
+<span class="co">#&gt; - Fold06: mtry=11 </span>
+<span class="co">#&gt; + Fold07: mtry= 2 </span>
+<span class="co">#&gt; - Fold07: mtry= 2 </span>
+<span class="co">#&gt; + Fold07: mtry= 6 </span>
+<span class="co">#&gt; - Fold07: mtry= 6 </span>
+<span class="co">#&gt; + Fold07: mtry=11 </span>
+<span class="co">#&gt; - Fold07: mtry=11 </span>
+<span class="co">#&gt; + Fold08: mtry= 2 </span>
+<span class="co">#&gt; - Fold08: mtry= 2 </span>
+<span class="co">#&gt; + Fold08: mtry= 6 </span>
+<span class="co">#&gt; - Fold08: mtry= 6 </span>
+<span class="co">#&gt; + Fold08: mtry=11 </span>
+<span class="co">#&gt; - Fold08: mtry=11 </span>
+<span class="co">#&gt; + Fold09: mtry= 2 </span>
+<span class="co">#&gt; - Fold09: mtry= 2 </span>
+<span class="co">#&gt; + Fold09: mtry= 6 </span>
+<span class="co">#&gt; - Fold09: mtry= 6 </span>
+<span class="co">#&gt; + Fold09: mtry=11 </span>
+<span class="co">#&gt; - Fold09: mtry=11 </span>
+<span class="co">#&gt; + Fold10: mtry= 2 </span>
+<span class="co">#&gt; - Fold10: mtry= 2 </span>
+<span class="co">#&gt; + Fold10: mtry= 6 </span>
+<span class="co">#&gt; - Fold10: mtry= 6 </span>
+<span class="co">#&gt; + Fold10: mtry=11 </span>
+<span class="co">#&gt; - Fold10: mtry=11 </span>
 <span class="co">#&gt; Aggregating results</span>
 <span class="co">#&gt; Selecting tuning parameters</span>
 <span class="co">#&gt; Fitting mtry = 2 on full training set</span>
-<span class="co">#&gt; + Fold01: mtry=2 </span>
-<span class="co">#&gt; - Fold01: mtry=2 </span>
-<span class="co">#&gt; + Fold01: mtry=5 </span>
-<span class="co">#&gt; - Fold01: mtry=5 </span>
-<span class="co">#&gt; + Fold01: mtry=9 </span>
-<span class="co">#&gt; - Fold01: mtry=9 </span>
-<span class="co">#&gt; + Fold02: mtry=2 </span>
-<span class="co">#&gt; - Fold02: mtry=2 </span>
-<span class="co">#&gt; + Fold02: mtry=5 </span>
-<span class="co">#&gt; - Fold02: mtry=5 </span>
-<span class="co">#&gt; + Fold02: mtry=9 </span>
-<span class="co">#&gt; - Fold02: mtry=9 </span>
-<span class="co">#&gt; + Fold03: mtry=2 </span>
-<span class="co">#&gt; - Fold03: mtry=2 </span>
-<span class="co">#&gt; + Fold03: mtry=5 </span>
-<span class="co">#&gt; - Fold03: mtry=5 </span>
-<span class="co">#&gt; + Fold03: mtry=9 </span>
-<span class="co">#&gt; - Fold03: mtry=9 </span>
-<span class="co">#&gt; + Fold04: mtry=2 </span>
-<span class="co">#&gt; - Fold04: mtry=2 </span>
-<span class="co">#&gt; + Fold04: mtry=5 </span>
-<span class="co">#&gt; - Fold04: mtry=5 </span>
-<span class="co">#&gt; + Fold04: mtry=9 </span>
-<span class="co">#&gt; - Fold04: mtry=9 </span>
-<span class="co">#&gt; + Fold05: mtry=2 </span>
-<span class="co">#&gt; - Fold05: mtry=2 </span>
-<span class="co">#&gt; + Fold05: mtry=5 </span>
-<span class="co">#&gt; - Fold05: mtry=5 </span>
-<span class="co">#&gt; + Fold05: mtry=9 </span>
-<span class="co">#&gt; - Fold05: mtry=9 </span>
-<span class="co">#&gt; + Fold06: mtry=2 </span>
-<span class="co">#&gt; - Fold06: mtry=2 </span>
-<span class="co">#&gt; + Fold06: mtry=5 </span>
-<span class="co">#&gt; - Fold06: mtry=5 </span>
-<span class="co">#&gt; + Fold06: mtry=9 </span>
-<span class="co">#&gt; - Fold06: mtry=9 </span>
-<span class="co">#&gt; + Fold07: mtry=2 </span>
-<span class="co">#&gt; - Fold07: mtry=2 </span>
-<span class="co">#&gt; + Fold07: mtry=5 </span>
-<span class="co">#&gt; - Fold07: mtry=5 </span>
-<span class="co">#&gt; + Fold07: mtry=9 </span>
-<span class="co">#&gt; - Fold07: mtry=9 </span>
-<span class="co">#&gt; + Fold08: mtry=2 </span>
-<span class="co">#&gt; - Fold08: mtry=2 </span>
-<span class="co">#&gt; + Fold08: mtry=5 </span>
-<span class="co">#&gt; - Fold08: mtry=5 </span>
-<span class="co">#&gt; + Fold08: mtry=9 </span>
-<span class="co">#&gt; - Fold08: mtry=9 </span>
-<span class="co">#&gt; + Fold09: mtry=2 </span>
-<span class="co">#&gt; - Fold09: mtry=2 </span>
-<span class="co">#&gt; + Fold09: mtry=5 </span>
-<span class="co">#&gt; - Fold09: mtry=5 </span>
-<span class="co">#&gt; + Fold09: mtry=9 </span>
-<span class="co">#&gt; - Fold09: mtry=9 </span>
-<span class="co">#&gt; + Fold10: mtry=2 </span>
-<span class="co">#&gt; - Fold10: mtry=2 </span>
-<span class="co">#&gt; + Fold10: mtry=5 </span>
-<span class="co">#&gt; - Fold10: mtry=5 </span>
-<span class="co">#&gt; + Fold10: mtry=9 </span>
-<span class="co">#&gt; - Fold10: mtry=9 </span>
+<span class="co">#&gt; + Fold01: mtry= 2 </span>
+<span class="co">#&gt; - Fold01: mtry= 2 </span>
+<span class="co">#&gt; + Fold01: mtry= 6 </span>
+<span class="co">#&gt; - Fold01: mtry= 6 </span>
+<span class="co">#&gt; + Fold01: mtry=11 </span>
+<span class="co">#&gt; - Fold01: mtry=11 </span>
+<span class="co">#&gt; + Fold02: mtry= 2 </span>
+<span class="co">#&gt; - Fold02: mtry= 2 </span>
+<span class="co">#&gt; + Fold02: mtry= 6 </span>
+<span class="co">#&gt; - Fold02: mtry= 6 </span>
+<span class="co">#&gt; + Fold02: mtry=11 </span>
+<span class="co">#&gt; - Fold02: mtry=11 </span>
+<span class="co">#&gt; + Fold03: mtry= 2 </span>
+<span class="co">#&gt; - Fold03: mtry= 2 </span>
+<span class="co">#&gt; + Fold03: mtry= 6 </span>
+<span class="co">#&gt; - Fold03: mtry= 6 </span>
+<span class="co">#&gt; + Fold03: mtry=11 </span>
+<span class="co">#&gt; - Fold03: mtry=11 </span>
+<span class="co">#&gt; + Fold04: mtry= 2 </span>
+<span class="co">#&gt; - Fold04: mtry= 2 </span>
+<span class="co">#&gt; + Fold04: mtry= 6 </span>
+<span class="co">#&gt; - Fold04: mtry= 6 </span>
+<span class="co">#&gt; + Fold04: mtry=11 </span>
+<span class="co">#&gt; - Fold04: mtry=11 </span>
+<span class="co">#&gt; + Fold05: mtry= 2 </span>
+<span class="co">#&gt; - Fold05: mtry= 2 </span>
+<span class="co">#&gt; + Fold05: mtry= 6 </span>
+<span class="co">#&gt; - Fold05: mtry= 6 </span>
+<span class="co">#&gt; + Fold05: mtry=11 </span>
+<span class="co">#&gt; - Fold05: mtry=11 </span>
+<span class="co">#&gt; + Fold06: mtry= 2 </span>
+<span class="co">#&gt; - Fold06: mtry= 2 </span>
+<span class="co">#&gt; + Fold06: mtry= 6 </span>
+<span class="co">#&gt; - Fold06: mtry= 6 </span>
+<span class="co">#&gt; + Fold06: mtry=11 </span>
+<span class="co">#&gt; - Fold06: mtry=11 </span>
+<span class="co">#&gt; + Fold07: mtry= 2 </span>
+<span class="co">#&gt; - Fold07: mtry= 2 </span>
+<span class="co">#&gt; + Fold07: mtry= 6 </span>
+<span class="co">#&gt; - Fold07: mtry= 6 </span>
+<span class="co">#&gt; + Fold07: mtry=11 </span>
+<span class="co">#&gt; - Fold07: mtry=11 </span>
+<span class="co">#&gt; + Fold08: mtry= 2 </span>
+<span class="co">#&gt; - Fold08: mtry= 2 </span>
+<span class="co">#&gt; + Fold08: mtry= 6 </span>
+<span class="co">#&gt; - Fold08: mtry= 6 </span>
+<span class="co">#&gt; + Fold08: mtry=11 </span>
+<span class="co">#&gt; - Fold08: mtry=11 </span>
+<span class="co">#&gt; + Fold09: mtry= 2 </span>
+<span class="co">#&gt; - Fold09: mtry= 2 </span>
+<span class="co">#&gt; + Fold09: mtry= 6 </span>
+<span class="co">#&gt; - Fold09: mtry= 6 </span>
+<span class="co">#&gt; + Fold09: mtry=11 </span>
+<span class="co">#&gt; - Fold09: mtry=11 </span>
+<span class="co">#&gt; + Fold10: mtry= 2 </span>
+<span class="co">#&gt; - Fold10: mtry= 2 </span>
+<span class="co">#&gt; + Fold10: mtry= 6 </span>
+<span class="co">#&gt; - Fold10: mtry= 6 </span>
+<span class="co">#&gt; + Fold10: mtry=11 </span>
+<span class="co">#&gt; - Fold10: mtry=11 </span>
 <span class="co">#&gt; Aggregating results</span>
 <span class="co">#&gt; Selecting tuning parameters</span>
 <span class="co">#&gt; Fitting mtry = 2 on full training set</span>
-<span class="co">#&gt; Warning in multiclass.roc.multivariate(response, predictor, levels, percent, :</span>
-<span class="co">#&gt; No observation for response level(s): Informal</span>
-<span class="co">#&gt; Warning in multiclass.roc.multivariate(response, predictor, levels, percent, :</span>
-<span class="co">#&gt; The following classes were not found in 'response': Informal.</span>
-<span class="co">#&gt; $EstMdl</span>
-<span class="co">#&gt; $EstMdl$`BchMk+networth`</span>
-<span class="co">#&gt; Random Forest </span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; 401 samples</span>
-<span class="co">#&gt;   9 predictor</span>
-<span class="co">#&gt;   4 classes: 'No.Loan', 'Formal', 'Informal', 'L.Both' </span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; Pre-processing: centered (9), scaled (9) </span>
-<span class="co">#&gt; Resampling: Cross-Validated (10 fold) </span>
-<span class="co">#&gt; Summary of sample sizes: 360, 360, 360, 362, 362, 361, ... </span>
-<span class="co">#&gt; Resampling results across tuning parameters:</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt;   mtry  Accuracy   Kappa    </span>
-<span class="co">#&gt;   2     0.7707114  0.3456548</span>
-<span class="co">#&gt;   5     0.7605801  0.3469101</span>
-<span class="co">#&gt;   9     0.7629550  0.3530162</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; Accuracy was used to select the optimal model using the largest value.</span>
-<span class="co">#&gt; The final value used for the model was mtry = 2.</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; $EstMdl$`D.0+networth`</span>
-<span class="co">#&gt; Random Forest </span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; 299 samples</span>
-<span class="co">#&gt;   9 predictor</span>
-<span class="co">#&gt;   4 classes: 'No.Loan', 'Formal', 'Informal', 'L.Both' </span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; Pre-processing: centered (9), scaled (9) </span>
-<span class="co">#&gt; Resampling: Cross-Validated (10 fold) </span>
-<span class="co">#&gt; Summary of sample sizes: 268, 268, 270, 270, 270, 267, ... </span>
-<span class="co">#&gt; Resampling results across tuning parameters:</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt;   mtry  Accuracy   Kappa    </span>
-<span class="co">#&gt;   2     0.7341456  0.1741526</span>
-<span class="co">#&gt;   5     0.7195843  0.1548829</span>
-<span class="co">#&gt;   9     0.7091386  0.1629829</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; Accuracy was used to select the optimal model using the largest value.</span>
-<span class="co">#&gt; The final value used for the model was mtry = 2.</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; $EstMdl$`D.1+networth`</span>
-<span class="co">#&gt; Random Forest </span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; 103 samples</span>
-<span class="co">#&gt;   9 predictor</span>
-<span class="co">#&gt;   4 classes: 'No.Loan', 'Formal', 'Informal', 'L.Both' </span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; Pre-processing: centered (9), scaled (9) </span>
-<span class="co">#&gt; Resampling: Cross-Validated (10 fold) </span>
-<span class="co">#&gt; Summary of sample sizes: 92, 93, 94, 93, 92, 92, ... </span>
-<span class="co">#&gt; Resampling results across tuning parameters:</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt;   mtry  Accuracy   Kappa    </span>
-<span class="co">#&gt;   2     0.7814141  0.4888854</span>
-<span class="co">#&gt;   5     0.7432323  0.3997852</span>
-<span class="co">#&gt;   9     0.7332323  0.4020644</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; Accuracy was used to select the optimal model using the largest value.</span>
-<span class="co">#&gt; The final value used for the model was mtry = 2.</span></code></pre>
+<span class="co">#&gt; + Fold01: mtry= 2 </span>
+<span class="co">#&gt; - Fold01: mtry= 2 </span>
+<span class="co">#&gt; + Fold01: mtry= 6 </span>
+<span class="co">#&gt; - Fold01: mtry= 6 </span>
+<span class="co">#&gt; + Fold01: mtry=11 </span>
+<span class="co">#&gt; - Fold01: mtry=11 </span>
+<span class="co">#&gt; + Fold02: mtry= 2 </span>
+<span class="co">#&gt; - Fold02: mtry= 2 </span>
+<span class="co">#&gt; + Fold02: mtry= 6 </span>
+<span class="co">#&gt; - Fold02: mtry= 6 </span>
+<span class="co">#&gt; + Fold02: mtry=11 </span>
+<span class="co">#&gt; - Fold02: mtry=11 </span>
+<span class="co">#&gt; + Fold03: mtry= 2 </span>
+<span class="co">#&gt; - Fold03: mtry= 2 </span>
+<span class="co">#&gt; + Fold03: mtry= 6 </span>
+<span class="co">#&gt; - Fold03: mtry= 6 </span>
+<span class="co">#&gt; + Fold03: mtry=11 </span>
+<span class="co">#&gt; - Fold03: mtry=11 </span>
+<span class="co">#&gt; + Fold04: mtry= 2 </span>
+<span class="co">#&gt; - Fold04: mtry= 2 </span>
+<span class="co">#&gt; + Fold04: mtry= 6 </span>
+<span class="co">#&gt; - Fold04: mtry= 6 </span>
+<span class="co">#&gt; + Fold04: mtry=11 </span>
+<span class="co">#&gt; - Fold04: mtry=11 </span>
+<span class="co">#&gt; + Fold05: mtry= 2 </span>
+<span class="co">#&gt; - Fold05: mtry= 2 </span>
+<span class="co">#&gt; + Fold05: mtry= 6 </span>
+<span class="co">#&gt; - Fold05: mtry= 6 </span>
+<span class="co">#&gt; + Fold05: mtry=11 </span>
+<span class="co">#&gt; - Fold05: mtry=11 </span>
+<span class="co">#&gt; + Fold06: mtry= 2 </span>
+<span class="co">#&gt; - Fold06: mtry= 2 </span>
+<span class="co">#&gt; + Fold06: mtry= 6 </span>
+<span class="co">#&gt; - Fold06: mtry= 6 </span>
+<span class="co">#&gt; + Fold06: mtry=11 </span>
+<span class="co">#&gt; - Fold06: mtry=11 </span>
+<span class="co">#&gt; + Fold07: mtry= 2 </span>
+<span class="co">#&gt; - Fold07: mtry= 2 </span>
+<span class="co">#&gt; + Fold07: mtry= 6 </span>
+<span class="co">#&gt; - Fold07: mtry= 6 </span>
+<span class="co">#&gt; + Fold07: mtry=11 </span>
+<span class="co">#&gt; - Fold07: mtry=11 </span>
+<span class="co">#&gt; + Fold08: mtry= 2 </span>
+<span class="co">#&gt; - Fold08: mtry= 2 </span>
+<span class="co">#&gt; + Fold08: mtry= 6 </span>
+<span class="co">#&gt; - Fold08: mtry= 6 </span>
+<span class="co">#&gt; + Fold08: mtry=11 </span>
+<span class="co">#&gt; - Fold08: mtry=11 </span>
+<span class="co">#&gt; + Fold09: mtry= 2 </span>
+<span class="co">#&gt; - Fold09: mtry= 2 </span>
+<span class="co">#&gt; + Fold09: mtry= 6 </span>
+<span class="co">#&gt; - Fold09: mtry= 6 </span>
+<span class="co">#&gt; + Fold09: mtry=11 </span>
+<span class="co">#&gt; - Fold09: mtry=11 </span>
+<span class="co">#&gt; + Fold10: mtry= 2 </span>
+<span class="co">#&gt; - Fold10: mtry= 2 </span>
+<span class="co">#&gt; + Fold10: mtry= 6 </span>
+<span class="co">#&gt; - Fold10: mtry= 6 </span>
+<span class="co">#&gt; + Fold10: mtry=11 </span>
+<span class="co">#&gt; - Fold10: mtry=11 </span>
+<span class="co">#&gt; Aggregating results</span>
+<span class="co">#&gt; Selecting tuning parameters</span>
+<span class="co">#&gt; Fitting mtry = 2 on full training set</span>
+<span class="co">#&gt; + Fold01: mtry= 2 </span>
+<span class="co">#&gt; - Fold01: mtry= 2 </span>
+<span class="co">#&gt; + Fold01: mtry= 6 </span>
+<span class="co">#&gt; - Fold01: mtry= 6 </span>
+<span class="co">#&gt; + Fold01: mtry=11 </span>
+<span class="co">#&gt; - Fold01: mtry=11 </span>
+<span class="co">#&gt; + Fold02: mtry= 2 </span>
+<span class="co">#&gt; - Fold02: mtry= 2 </span>
+<span class="co">#&gt; + Fold02: mtry= 6 </span>
+<span class="co">#&gt; - Fold02: mtry= 6 </span>
+<span class="co">#&gt; + Fold02: mtry=11 </span>
+<span class="co">#&gt; - Fold02: mtry=11 </span>
+<span class="co">#&gt; + Fold03: mtry= 2 </span>
+<span class="co">#&gt; - Fold03: mtry= 2 </span>
+<span class="co">#&gt; + Fold03: mtry= 6 </span>
+<span class="co">#&gt; - Fold03: mtry= 6 </span>
+<span class="co">#&gt; + Fold03: mtry=11 </span>
+<span class="co">#&gt; - Fold03: mtry=11 </span>
+<span class="co">#&gt; + Fold04: mtry= 2 </span>
+<span class="co">#&gt; - Fold04: mtry= 2 </span>
+<span class="co">#&gt; + Fold04: mtry= 6 </span>
+<span class="co">#&gt; - Fold04: mtry= 6 </span>
+<span class="co">#&gt; + Fold04: mtry=11 </span>
+<span class="co">#&gt; - Fold04: mtry=11 </span>
+<span class="co">#&gt; + Fold05: mtry= 2 </span>
+<span class="co">#&gt; - Fold05: mtry= 2 </span>
+<span class="co">#&gt; + Fold05: mtry= 6 </span>
+<span class="co">#&gt; - Fold05: mtry= 6 </span>
+<span class="co">#&gt; + Fold05: mtry=11 </span>
+<span class="co">#&gt; - Fold05: mtry=11 </span>
+<span class="co">#&gt; + Fold06: mtry= 2 </span>
+<span class="co">#&gt; - Fold06: mtry= 2 </span>
+<span class="co">#&gt; + Fold06: mtry= 6 </span>
+<span class="co">#&gt; - Fold06: mtry= 6 </span>
+<span class="co">#&gt; + Fold06: mtry=11 </span>
+<span class="co">#&gt; - Fold06: mtry=11 </span>
+<span class="co">#&gt; + Fold07: mtry= 2 </span>
+<span class="co">#&gt; - Fold07: mtry= 2 </span>
+<span class="co">#&gt; + Fold07: mtry= 6 </span>
+<span class="co">#&gt; - Fold07: mtry= 6 </span>
+<span class="co">#&gt; + Fold07: mtry=11 </span>
+<span class="co">#&gt; - Fold07: mtry=11 </span>
+<span class="co">#&gt; + Fold08: mtry= 2 </span>
+<span class="co">#&gt; - Fold08: mtry= 2 </span>
+<span class="co">#&gt; + Fold08: mtry= 6 </span>
+<span class="co">#&gt; - Fold08: mtry= 6 </span>
+<span class="co">#&gt; + Fold08: mtry=11 </span>
+<span class="co">#&gt; - Fold08: mtry=11 </span>
+<span class="co">#&gt; + Fold09: mtry= 2 </span>
+<span class="co">#&gt; - Fold09: mtry= 2 </span>
+<span class="co">#&gt; + Fold09: mtry= 6 </span>
+<span class="co">#&gt; - Fold09: mtry= 6 </span>
+<span class="co">#&gt; + Fold09: mtry=11 </span>
+<span class="co">#&gt; - Fold09: mtry=11 </span>
+<span class="co">#&gt; + Fold10: mtry= 2 </span>
+<span class="co">#&gt; - Fold10: mtry= 2 </span>
+<span class="co">#&gt; + Fold10: mtry= 6 </span>
+<span class="co">#&gt; - Fold10: mtry= 6 </span>
+<span class="co">#&gt; + Fold10: mtry=11 </span>
+<span class="co">#&gt; - Fold10: mtry=11 </span>
+<span class="co">#&gt; Aggregating results</span>
+<span class="co">#&gt; Selecting tuning parameters</span>
+<span class="co">#&gt; Fitting mtry = 2 on full training set</span>
+<span class="co">#&gt; + Fold01: mtry= 2 </span>
+<span class="co">#&gt; - Fold01: mtry= 2 </span>
+<span class="co">#&gt; + Fold01: mtry= 6 </span>
+<span class="co">#&gt; - Fold01: mtry= 6 </span>
+<span class="co">#&gt; + Fold01: mtry=11 </span>
+<span class="co">#&gt; - Fold01: mtry=11 </span>
+<span class="co">#&gt; + Fold02: mtry= 2 </span>
+<span class="co">#&gt; - Fold02: mtry= 2 </span>
+<span class="co">#&gt; + Fold02: mtry= 6 </span>
+<span class="co">#&gt; - Fold02: mtry= 6 </span>
+<span class="co">#&gt; + Fold02: mtry=11 </span>
+<span class="co">#&gt; - Fold02: mtry=11 </span>
+<span class="co">#&gt; + Fold03: mtry= 2 </span>
+<span class="co">#&gt; - Fold03: mtry= 2 </span>
+<span class="co">#&gt; + Fold03: mtry= 6 </span>
+<span class="co">#&gt; - Fold03: mtry= 6 </span>
+<span class="co">#&gt; + Fold03: mtry=11 </span>
+<span class="co">#&gt; - Fold03: mtry=11 </span>
+<span class="co">#&gt; + Fold04: mtry= 2 </span>
+<span class="co">#&gt; - Fold04: mtry= 2 </span>
+<span class="co">#&gt; + Fold04: mtry= 6 </span>
+<span class="co">#&gt; - Fold04: mtry= 6 </span>
+<span class="co">#&gt; + Fold04: mtry=11 </span>
+<span class="co">#&gt; - Fold04: mtry=11 </span>
+<span class="co">#&gt; + Fold05: mtry= 2 </span>
+<span class="co">#&gt; - Fold05: mtry= 2 </span>
+<span class="co">#&gt; + Fold05: mtry= 6 </span>
+<span class="co">#&gt; - Fold05: mtry= 6 </span>
+<span class="co">#&gt; + Fold05: mtry=11 </span>
+<span class="co">#&gt; - Fold05: mtry=11 </span>
+<span class="co">#&gt; + Fold06: mtry= 2 </span>
+<span class="co">#&gt; - Fold06: mtry= 2 </span>
+<span class="co">#&gt; + Fold06: mtry= 6 </span>
+<span class="co">#&gt; - Fold06: mtry= 6 </span>
+<span class="co">#&gt; + Fold06: mtry=11 </span>
+<span class="co">#&gt; - Fold06: mtry=11 </span>
+<span class="co">#&gt; + Fold07: mtry= 2 </span>
+<span class="co">#&gt; - Fold07: mtry= 2 </span>
+<span class="co">#&gt; + Fold07: mtry= 6 </span>
+<span class="co">#&gt; - Fold07: mtry= 6 </span>
+<span class="co">#&gt; + Fold07: mtry=11 </span>
+<span class="co">#&gt; - Fold07: mtry=11 </span>
+<span class="co">#&gt; + Fold08: mtry= 2 </span>
+<span class="co">#&gt; - Fold08: mtry= 2 </span>
+<span class="co">#&gt; + Fold08: mtry= 6 </span>
+<span class="co">#&gt; - Fold08: mtry= 6 </span>
+<span class="co">#&gt; + Fold08: mtry=11 </span>
+<span class="co">#&gt; - Fold08: mtry=11 </span>
+<span class="co">#&gt; + Fold09: mtry= 2 </span>
+<span class="co">#&gt; - Fold09: mtry= 2 </span>
+<span class="co">#&gt; + Fold09: mtry= 6 </span>
+<span class="co">#&gt; - Fold09: mtry= 6 </span>
+<span class="co">#&gt; + Fold09: mtry=11 </span>
+<span class="co">#&gt; - Fold09: mtry=11 </span>
+<span class="co">#&gt; + Fold10: mtry= 2 </span>
+<span class="co">#&gt; - Fold10: mtry= 2 </span>
+<span class="co">#&gt; + Fold10: mtry= 6 </span>
+<span class="co">#&gt; - Fold10: mtry= 6 </span>
+<span class="co">#&gt; + Fold10: mtry=11 </span>
+<span class="co">#&gt; - Fold10: mtry=11 </span>
+<span class="co">#&gt; Aggregating results</span>
+<span class="co">#&gt; Selecting tuning parameters</span>
+<span class="co">#&gt; Fitting mtry = 2 on full training set</span>
+<span class="co">#&gt; + Fold01: mtry= 2 </span>
+<span class="co">#&gt; - Fold01: mtry= 2 </span>
+<span class="co">#&gt; + Fold01: mtry= 6 </span>
+<span class="co">#&gt; - Fold01: mtry= 6 </span>
+<span class="co">#&gt; + Fold01: mtry=11 </span>
+<span class="co">#&gt; - Fold01: mtry=11 </span>
+<span class="co">#&gt; + Fold02: mtry= 2 </span>
+<span class="co">#&gt; - Fold02: mtry= 2 </span>
+<span class="co">#&gt; + Fold02: mtry= 6 </span>
+<span class="co">#&gt; - Fold02: mtry= 6 </span>
+<span class="co">#&gt; + Fold02: mtry=11 </span>
+<span class="co">#&gt; - Fold02: mtry=11 </span>
+<span class="co">#&gt; + Fold03: mtry= 2 </span>
+<span class="co">#&gt; - Fold03: mtry= 2 </span>
+<span class="co">#&gt; + Fold03: mtry= 6 </span>
+<span class="co">#&gt; - Fold03: mtry= 6 </span>
+<span class="co">#&gt; + Fold03: mtry=11 </span>
+<span class="co">#&gt; - Fold03: mtry=11 </span>
+<span class="co">#&gt; + Fold04: mtry= 2 </span>
+<span class="co">#&gt; - Fold04: mtry= 2 </span>
+<span class="co">#&gt; + Fold04: mtry= 6 </span>
+<span class="co">#&gt; - Fold04: mtry= 6 </span>
+<span class="co">#&gt; + Fold04: mtry=11 </span>
+<span class="co">#&gt; - Fold04: mtry=11 </span>
+<span class="co">#&gt; + Fold05: mtry= 2 </span>
+<span class="co">#&gt; - Fold05: mtry= 2 </span>
+<span class="co">#&gt; + Fold05: mtry= 6 </span>
+<span class="co">#&gt; - Fold05: mtry= 6 </span>
+<span class="co">#&gt; + Fold05: mtry=11 </span>
+<span class="co">#&gt; - Fold05: mtry=11 </span>
+<span class="co">#&gt; + Fold06: mtry= 2 </span>
+<span class="co">#&gt; - Fold06: mtry= 2 </span>
+<span class="co">#&gt; + Fold06: mtry= 6 </span>
+<span class="co">#&gt; - Fold06: mtry= 6 </span>
+<span class="co">#&gt; + Fold06: mtry=11 </span>
+<span class="co">#&gt; - Fold06: mtry=11 </span>
+<span class="co">#&gt; + Fold07: mtry= 2 </span>
+<span class="co">#&gt; - Fold07: mtry= 2 </span>
+<span class="co">#&gt; + Fold07: mtry= 6 </span>
+<span class="co">#&gt; - Fold07: mtry= 6 </span>
+<span class="co">#&gt; + Fold07: mtry=11 </span>
+<span class="co">#&gt; - Fold07: mtry=11 </span>
+<span class="co">#&gt; + Fold08: mtry= 2 </span>
+<span class="co">#&gt; - Fold08: mtry= 2 </span>
+<span class="co">#&gt; + Fold08: mtry= 6 </span>
+<span class="co">#&gt; - Fold08: mtry= 6 </span>
+<span class="co">#&gt; + Fold08: mtry=11 </span>
+<span class="co">#&gt; - Fold08: mtry=11 </span>
+<span class="co">#&gt; + Fold09: mtry= 2 </span>
+<span class="co">#&gt; - Fold09: mtry= 2 </span>
+<span class="co">#&gt; + Fold09: mtry= 6 </span>
+<span class="co">#&gt; - Fold09: mtry= 6 </span>
+<span class="co">#&gt; + Fold09: mtry=11 </span>
+<span class="co">#&gt; - Fold09: mtry=11 </span>
+<span class="co">#&gt; + Fold10: mtry= 2 </span>
+<span class="co">#&gt; - Fold10: mtry= 2 </span>
+<span class="co">#&gt; + Fold10: mtry= 6 </span>
+<span class="co">#&gt; - Fold10: mtry= 6 </span>
+<span class="co">#&gt; + Fold10: mtry=11 </span>
+<span class="co">#&gt; - Fold10: mtry=11 </span>
+<span class="co">#&gt; Aggregating results</span>
+<span class="co">#&gt; Selecting tuning parameters</span>
+<span class="co">#&gt; Fitting mtry = 2 on full training set</span>
+<span class="co">#&gt; + Fold01: mtry= 2 </span>
+<span class="co">#&gt; - Fold01: mtry= 2 </span>
+<span class="co">#&gt; + Fold01: mtry= 6 </span>
+<span class="co">#&gt; - Fold01: mtry= 6 </span>
+<span class="co">#&gt; + Fold01: mtry=11 </span>
+<span class="co">#&gt; - Fold01: mtry=11 </span>
+<span class="co">#&gt; + Fold02: mtry= 2 </span>
+<span class="co">#&gt; - Fold02: mtry= 2 </span>
+<span class="co">#&gt; + Fold02: mtry= 6 </span>
+<span class="co">#&gt; - Fold02: mtry= 6 </span>
+<span class="co">#&gt; + Fold02: mtry=11 </span>
+<span class="co">#&gt; - Fold02: mtry=11 </span>
+<span class="co">#&gt; + Fold03: mtry= 2 </span>
+<span class="co">#&gt; - Fold03: mtry= 2 </span>
+<span class="co">#&gt; + Fold03: mtry= 6 </span>
+<span class="co">#&gt; - Fold03: mtry= 6 </span>
+<span class="co">#&gt; + Fold03: mtry=11 </span>
+<span class="co">#&gt; - Fold03: mtry=11 </span>
+<span class="co">#&gt; + Fold04: mtry= 2 </span>
+<span class="co">#&gt; - Fold04: mtry= 2 </span>
+<span class="co">#&gt; + Fold04: mtry= 6 </span>
+<span class="co">#&gt; - Fold04: mtry= 6 </span>
+<span class="co">#&gt; + Fold04: mtry=11 </span>
+<span class="co">#&gt; - Fold04: mtry=11 </span>
+<span class="co">#&gt; + Fold05: mtry= 2 </span>
+<span class="co">#&gt; - Fold05: mtry= 2 </span>
+<span class="co">#&gt; + Fold05: mtry= 6 </span>
+<span class="co">#&gt; - Fold05: mtry= 6 </span>
+<span class="co">#&gt; + Fold05: mtry=11 </span>
+<span class="co">#&gt; - Fold05: mtry=11 </span>
+<span class="co">#&gt; + Fold06: mtry= 2 </span>
+<span class="co">#&gt; - Fold06: mtry= 2 </span>
+<span class="co">#&gt; + Fold06: mtry= 6 </span>
+<span class="co">#&gt; - Fold06: mtry= 6 </span>
+<span class="co">#&gt; + Fold06: mtry=11 </span>
+<span class="co">#&gt; - Fold06: mtry=11 </span>
+<span class="co">#&gt; + Fold07: mtry= 2 </span>
+<span class="co">#&gt; - Fold07: mtry= 2 </span>
+<span class="co">#&gt; + Fold07: mtry= 6 </span>
+<span class="co">#&gt; - Fold07: mtry= 6 </span>
+<span class="co">#&gt; + Fold07: mtry=11 </span>
+<span class="co">#&gt; - Fold07: mtry=11 </span>
+<span class="co">#&gt; + Fold08: mtry= 2 </span>
+<span class="co">#&gt; - Fold08: mtry= 2 </span>
+<span class="co">#&gt; + Fold08: mtry= 6 </span>
+<span class="co">#&gt; - Fold08: mtry= 6 </span>
+<span class="co">#&gt; + Fold08: mtry=11 </span>
+<span class="co">#&gt; - Fold08: mtry=11 </span>
+<span class="co">#&gt; + Fold09: mtry= 2 </span>
+<span class="co">#&gt; - Fold09: mtry= 2 </span>
+<span class="co">#&gt; + Fold09: mtry= 6 </span>
+<span class="co">#&gt; - Fold09: mtry= 6 </span>
+<span class="co">#&gt; + Fold09: mtry=11 </span>
+<span class="co">#&gt; - Fold09: mtry=11 </span>
+<span class="co">#&gt; + Fold10: mtry= 2 </span>
+<span class="co">#&gt; - Fold10: mtry= 2 </span>
+<span class="co">#&gt; + Fold10: mtry= 6 </span>
+<span class="co">#&gt; - Fold10: mtry= 6 </span>
+<span class="co">#&gt; + Fold10: mtry=11 </span>
+<span class="co">#&gt; - Fold10: mtry=11 </span>
+<span class="co">#&gt; Aggregating results</span>
+<span class="co">#&gt; Selecting tuning parameters</span>
+<span class="co">#&gt; Fitting mtry = 2 on full training set</span>
+<span class="co">#&gt; + Fold01: mtry= 2 </span>
+<span class="co">#&gt; - Fold01: mtry= 2 </span>
+<span class="co">#&gt; + Fold01: mtry= 6 </span>
+<span class="co">#&gt; - Fold01: mtry= 6 </span>
+<span class="co">#&gt; + Fold01: mtry=11 </span>
+<span class="co">#&gt; - Fold01: mtry=11 </span>
+<span class="co">#&gt; + Fold02: mtry= 2 </span>
+<span class="co">#&gt; - Fold02: mtry= 2 </span>
+<span class="co">#&gt; + Fold02: mtry= 6 </span>
+<span class="co">#&gt; - Fold02: mtry= 6 </span>
+<span class="co">#&gt; + Fold02: mtry=11 </span>
+<span class="co">#&gt; - Fold02: mtry=11 </span>
+<span class="co">#&gt; + Fold03: mtry= 2 </span>
+<span class="co">#&gt; - Fold03: mtry= 2 </span>
+<span class="co">#&gt; + Fold03: mtry= 6 </span>
+<span class="co">#&gt; - Fold03: mtry= 6 </span>
+<span class="co">#&gt; + Fold03: mtry=11 </span>
+<span class="co">#&gt; - Fold03: mtry=11 </span>
+<span class="co">#&gt; + Fold04: mtry= 2 </span>
+<span class="co">#&gt; - Fold04: mtry= 2 </span>
+<span class="co">#&gt; + Fold04: mtry= 6 </span>
+<span class="co">#&gt; - Fold04: mtry= 6 </span>
+<span class="co">#&gt; + Fold04: mtry=11 </span>
+<span class="co">#&gt; - Fold04: mtry=11 </span>
+<span class="co">#&gt; + Fold05: mtry= 2 </span>
+<span class="co">#&gt; - Fold05: mtry= 2 </span>
+<span class="co">#&gt; + Fold05: mtry= 6 </span>
+<span class="co">#&gt; - Fold05: mtry= 6 </span>
+<span class="co">#&gt; + Fold05: mtry=11 </span>
+<span class="co">#&gt; - Fold05: mtry=11 </span>
+<span class="co">#&gt; + Fold06: mtry= 2 </span>
+<span class="co">#&gt; - Fold06: mtry= 2 </span>
+<span class="co">#&gt; + Fold06: mtry= 6 </span>
+<span class="co">#&gt; - Fold06: mtry= 6 </span>
+<span class="co">#&gt; + Fold06: mtry=11 </span>
+<span class="co">#&gt; - Fold06: mtry=11 </span>
+<span class="co">#&gt; + Fold07: mtry= 2 </span>
+<span class="co">#&gt; - Fold07: mtry= 2 </span>
+<span class="co">#&gt; + Fold07: mtry= 6 </span>
+<span class="co">#&gt; - Fold07: mtry= 6 </span>
+<span class="co">#&gt; + Fold07: mtry=11 </span>
+<span class="co">#&gt; - Fold07: mtry=11 </span>
+<span class="co">#&gt; + Fold08: mtry= 2 </span>
+<span class="co">#&gt; - Fold08: mtry= 2 </span>
+<span class="co">#&gt; + Fold08: mtry= 6 </span>
+<span class="co">#&gt; - Fold08: mtry= 6 </span>
+<span class="co">#&gt; + Fold08: mtry=11 </span>
+<span class="co">#&gt; - Fold08: mtry=11 </span>
+<span class="co">#&gt; + Fold09: mtry= 2 </span>
+<span class="co">#&gt; - Fold09: mtry= 2 </span>
+<span class="co">#&gt; + Fold09: mtry= 6 </span>
+<span class="co">#&gt; - Fold09: mtry= 6 </span>
+<span class="co">#&gt; + Fold09: mtry=11 </span>
+<span class="co">#&gt; - Fold09: mtry=11 </span>
+<span class="co">#&gt; + Fold10: mtry= 2 </span>
+<span class="co">#&gt; - Fold10: mtry= 2 </span>
+<span class="co">#&gt; + Fold10: mtry= 6 </span>
+<span class="co">#&gt; - Fold10: mtry= 6 </span>
+<span class="co">#&gt; + Fold10: mtry=11 </span>
+<span class="co">#&gt; - Fold10: mtry=11 </span>
+<span class="co">#&gt; Aggregating results</span>
+<span class="co">#&gt; Selecting tuning parameters</span>
+<span class="co">#&gt; Fitting mtry = 2 on full training set</span></code></pre></div>
 </div>
 <div class="section level3">
 <h3 id="combined_performance">Combined_Performance<a class="anchor" aria-label="anchor" href="#combined_performance"></a>
 </h3>
 <p>Estimate_Models gives the results based on the splits of the <code>exog</code>. Combined_Performance prints out the total performance of these splits.</p>
-<pre><code><span class="co">#&gt; + Fold01: mtry=2 </span>
-<span class="co">#&gt; - Fold01: mtry=2 </span>
-<span class="co">#&gt; + Fold01: mtry=5 </span>
-<span class="co">#&gt; - Fold01: mtry=5 </span>
-<span class="co">#&gt; + Fold01: mtry=9 </span>
-<span class="co">#&gt; - Fold01: mtry=9 </span>
-<span class="co">#&gt; + Fold02: mtry=2 </span>
-<span class="co">#&gt; - Fold02: mtry=2 </span>
-<span class="co">#&gt; + Fold02: mtry=5 </span>
-<span class="co">#&gt; - Fold02: mtry=5 </span>
-<span class="co">#&gt; + Fold02: mtry=9 </span>
-<span class="co">#&gt; - Fold02: mtry=9 </span>
-<span class="co">#&gt; + Fold03: mtry=2 </span>
-<span class="co">#&gt; - Fold03: mtry=2 </span>
-<span class="co">#&gt; + Fold03: mtry=5 </span>
-<span class="co">#&gt; - Fold03: mtry=5 </span>
-<span class="co">#&gt; + Fold03: mtry=9 </span>
-<span class="co">#&gt; - Fold03: mtry=9 </span>
-<span class="co">#&gt; + Fold04: mtry=2 </span>
-<span class="co">#&gt; - Fold04: mtry=2 </span>
-<span class="co">#&gt; + Fold04: mtry=5 </span>
-<span class="co">#&gt; - Fold04: mtry=5 </span>
-<span class="co">#&gt; + Fold04: mtry=9 </span>
-<span class="co">#&gt; - Fold04: mtry=9 </span>
-<span class="co">#&gt; + Fold05: mtry=2 </span>
-<span class="co">#&gt; - Fold05: mtry=2 </span>
-<span class="co">#&gt; + Fold05: mtry=5 </span>
-<span class="co">#&gt; - Fold05: mtry=5 </span>
-<span class="co">#&gt; + Fold05: mtry=9 </span>
-<span class="co">#&gt; - Fold05: mtry=9 </span>
-<span class="co">#&gt; + Fold06: mtry=2 </span>
-<span class="co">#&gt; - Fold06: mtry=2 </span>
-<span class="co">#&gt; + Fold06: mtry=5 </span>
-<span class="co">#&gt; - Fold06: mtry=5 </span>
-<span class="co">#&gt; + Fold06: mtry=9 </span>
-<span class="co">#&gt; - Fold06: mtry=9 </span>
-<span class="co">#&gt; + Fold07: mtry=2 </span>
-<span class="co">#&gt; - Fold07: mtry=2 </span>
-<span class="co">#&gt; + Fold07: mtry=5 </span>
-<span class="co">#&gt; - Fold07: mtry=5 </span>
-<span class="co">#&gt; + Fold07: mtry=9 </span>
-<span class="co">#&gt; - Fold07: mtry=9 </span>
-<span class="co">#&gt; + Fold08: mtry=2 </span>
-<span class="co">#&gt; - Fold08: mtry=2 </span>
-<span class="co">#&gt; + Fold08: mtry=5 </span>
-<span class="co">#&gt; - Fold08: mtry=5 </span>
-<span class="co">#&gt; + Fold08: mtry=9 </span>
-<span class="co">#&gt; - Fold08: mtry=9 </span>
-<span class="co">#&gt; + Fold09: mtry=2 </span>
-<span class="co">#&gt; - Fold09: mtry=2 </span>
-<span class="co">#&gt; + Fold09: mtry=5 </span>
-<span class="co">#&gt; - Fold09: mtry=5 </span>
-<span class="co">#&gt; + Fold09: mtry=9 </span>
-<span class="co">#&gt; - Fold09: mtry=9 </span>
-<span class="co">#&gt; + Fold10: mtry=2 </span>
-<span class="co">#&gt; - Fold10: mtry=2 </span>
-<span class="co">#&gt; + Fold10: mtry=5 </span>
-<span class="co">#&gt; - Fold10: mtry=5 </span>
-<span class="co">#&gt; + Fold10: mtry=9 </span>
-<span class="co">#&gt; - Fold10: mtry=9 </span>
-<span class="co">#&gt; Aggregating results</span>
-<span class="co">#&gt; Selecting tuning parameters</span>
-<span class="co">#&gt; Fitting mtry = 2 on full training set</span>
-<span class="co">#&gt; Warning in multiclass.roc.multivariate(response, predictor, levels, percent, :</span>
-<span class="co">#&gt; No observation for response level(s): Informal</span>
-<span class="co">#&gt; Warning in multiclass.roc.multivariate(response, predictor, levels, percent, :</span>
-<span class="co">#&gt; The following classes were not found in 'response': Informal.</span>
-<span class="co">#&gt; + Fold01: mtry=2 </span>
-<span class="co">#&gt; - Fold01: mtry=2 </span>
-<span class="co">#&gt; + Fold01: mtry=5 </span>
-<span class="co">#&gt; - Fold01: mtry=5 </span>
-<span class="co">#&gt; + Fold01: mtry=9 </span>
-<span class="co">#&gt; - Fold01: mtry=9 </span>
-<span class="co">#&gt; + Fold02: mtry=2 </span>
-<span class="co">#&gt; - Fold02: mtry=2 </span>
-<span class="co">#&gt; + Fold02: mtry=5 </span>
-<span class="co">#&gt; - Fold02: mtry=5 </span>
-<span class="co">#&gt; + Fold02: mtry=9 </span>
-<span class="co">#&gt; - Fold02: mtry=9 </span>
-<span class="co">#&gt; + Fold03: mtry=2 </span>
-<span class="co">#&gt; - Fold03: mtry=2 </span>
-<span class="co">#&gt; + Fold03: mtry=5 </span>
-<span class="co">#&gt; - Fold03: mtry=5 </span>
-<span class="co">#&gt; + Fold03: mtry=9 </span>
-<span class="co">#&gt; - Fold03: mtry=9 </span>
-<span class="co">#&gt; + Fold04: mtry=2 </span>
-<span class="co">#&gt; - Fold04: mtry=2 </span>
-<span class="co">#&gt; + Fold04: mtry=5 </span>
-<span class="co">#&gt; - Fold04: mtry=5 </span>
-<span class="co">#&gt; + Fold04: mtry=9 </span>
-<span class="co">#&gt; - Fold04: mtry=9 </span>
-<span class="co">#&gt; + Fold05: mtry=2 </span>
-<span class="co">#&gt; - Fold05: mtry=2 </span>
-<span class="co">#&gt; + Fold05: mtry=5 </span>
-<span class="co">#&gt; - Fold05: mtry=5 </span>
-<span class="co">#&gt; + Fold05: mtry=9 </span>
-<span class="co">#&gt; - Fold05: mtry=9 </span>
-<span class="co">#&gt; + Fold06: mtry=2 </span>
-<span class="co">#&gt; - Fold06: mtry=2 </span>
-<span class="co">#&gt; + Fold06: mtry=5 </span>
-<span class="co">#&gt; - Fold06: mtry=5 </span>
-<span class="co">#&gt; + Fold06: mtry=9 </span>
-<span class="co">#&gt; - Fold06: mtry=9 </span>
-<span class="co">#&gt; + Fold07: mtry=2 </span>
-<span class="co">#&gt; - Fold07: mtry=2 </span>
-<span class="co">#&gt; + Fold07: mtry=5 </span>
-<span class="co">#&gt; - Fold07: mtry=5 </span>
-<span class="co">#&gt; + Fold07: mtry=9 </span>
-<span class="co">#&gt; - Fold07: mtry=9 </span>
-<span class="co">#&gt; + Fold08: mtry=2 </span>
-<span class="co">#&gt; - Fold08: mtry=2 </span>
-<span class="co">#&gt; + Fold08: mtry=5 </span>
-<span class="co">#&gt; - Fold08: mtry=5 </span>
-<span class="co">#&gt; + Fold08: mtry=9 </span>
-<span class="co">#&gt; - Fold08: mtry=9 </span>
-<span class="co">#&gt; + Fold09: mtry=2 </span>
-<span class="co">#&gt; - Fold09: mtry=2 </span>
-<span class="co">#&gt; + Fold09: mtry=5 </span>
-<span class="co">#&gt; - Fold09: mtry=5 </span>
-<span class="co">#&gt; + Fold09: mtry=9 </span>
-<span class="co">#&gt; - Fold09: mtry=9 </span>
-<span class="co">#&gt; + Fold10: mtry=2 </span>
-<span class="co">#&gt; - Fold10: mtry=2 </span>
-<span class="co">#&gt; + Fold10: mtry=5 </span>
-<span class="co">#&gt; - Fold10: mtry=5 </span>
-<span class="co">#&gt; + Fold10: mtry=9 </span>
-<span class="co">#&gt; - Fold10: mtry=9 </span>
-<span class="co">#&gt; Aggregating results</span>
-<span class="co">#&gt; Selecting tuning parameters</span>
-<span class="co">#&gt; Fitting mtry = 2 on full training set</span>
-<span class="co">#&gt; Multi-class area under the curve: 0.6944</span></code></pre>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">Sub.CCP.RF</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span> <span class="op">(</span>Mdl.1 <span class="op">=</span> <span class="va">CCP.RF</span><span class="op">$</span><span class="va">EstMdl</span><span class="op">$</span><span class="va">`D.1+networth`</span>,
+Mdl.0 <span class="op">=</span> <span class="va">CCP.RF</span><span class="op">$</span><span class="va">EstMdl</span><span class="op">$</span><span class="va">`D.0+networth`</span><span class="op">)</span>
+<span class="va">CCP.NoCCP.RF</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/Combined_Performance.html">Combined_Performance</a></span> <span class="op">(</span><span class="va">Sub.CCP.RF</span><span class="op">)</span></code></pre></div>
 </div>
   </main>
 </div>
