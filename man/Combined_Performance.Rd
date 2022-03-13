@@ -17,11 +17,15 @@ Combined Performance of the Data Splits
 }
 \examples{
 \donttest{
-library(dplyr)
 sample_data <- sample_data[c(1:750),]
-m2.xvar0 <- c("sex","married","age","havejob","educ","rural","region","income")
-m2.xvar1 <- c(m2.xvar0, "networth")   # with "networth"
-CCP <- sample_data \%>\% filter(sample_data$political.afl==1)
-NoCCP <- sample_data \%>\% filter(sample_data$political.afl==0)
+yvar <- c("Loan.Type")
+xvar <- c("sex", "married", "age", "havejob", "educ", "political.afl",
+"rural", "region", "fin.intermdiaries", "fin.knowldge", "income")
+CCP.RF <- Estimate_Models(sample_data, yvar, xvec = xvar, exog = "political.afl",
+xadd = c("networth", "networth_homequity", "liquid.assets"),
+type = "RF", dnames = c("0","1"))
+Sub.CCP.RF <- list (Mdl.1 = CCP.RF$EstMdl$`D.1+networth`,
+Mdl.0 = CCP.RF$EstMdl$`D.0+networth`)
+CCP.NoCCP.RF <- Combined_Performance (Sub.CCP.RF)
 }
 }

@@ -20,30 +20,36 @@
 #' @param yvar Y variable.
 #' @return The output from  \code{\link{GLM_Model}}.
 #' @export
-#' @importFrom  caret createDataPartition
-#' @importFrom  caret trainControl
-#' @importFrom  caret train
-#' @importFrom  pROC multiclass.roc
+#' @importFrom caret createDataPartition
+#' @importFrom caret trainControl
+#' @importFrom caret train
+#' @importFrom pROC multiclass.roc
 #' @importFrom stats glm
 #' @importFrom stats binomial pnorm predict
 #' @examples
 #' yvar <- c("multi.level")
 #' sample_data <- sample_data[c(1:750),]
-#' m2.xvar0 <- c("sex", "married", "age", "havejob", "educ", "rural", "region","income")
-#' BchMk.GLM <- GLM_Model(sample_data, c(m2.xvar0, "political.afl", "networth"), yvar)
+#' xvar <- c("sex", "married", "age", "havejob", "educ", "political.afl",
+#' "rural", "region", "fin.intermdiaries", "fin.knowldge", "income")
+#' BchMk.GLM <- GLM_Model(sample_data, c(xvar, "networth"), yvar )
 #' BchMk.GLM$finalModel
 #' BchMk.GLM$Roc$auc
 
 
 
+
+
+
 GLM_Model <- function(Data, xvar, yvar){ # #' @export was deleted
 
-  if (yvar == "Loan.Type"){
+  #if(yvar == "Loan.Type"){
+   #Data.sub <- Data[, c(xvar, yvar)]
+   #Data.sub[, yvar] <- factor(Data.sub[, yvar], levels = c( "No.Loan", "Formal",  "Informal", "L.Both"))
+  #}else if(yvar == "multi.level"){
+
+  if(yvar == "multi.level"){
     Data.sub <- Data[, c(xvar, yvar)]
-    Data.sub[, yvar] <- factor(Data.sub[, yvar], levels = c( "No.Loan", "Formal",  "Informal", "L.Both"))
-  } else if(yvar == "multi.level"){
-    Data.sub <- Data[, c(xvar, yvar)]
-    Data.sub[, yvar] <- factor(Data.sub[, yvar], levels = c( "zero", "one"))
+    Data.sub[, yvar] <- factor(Data.sub[, yvar], levels = c("zero", "one"))
   }
 
   #set.seed(87)

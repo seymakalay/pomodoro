@@ -35,9 +35,9 @@ by each \eqn{B}{B} trees and take a majority vote. Therefore, bagging for classi
 \donttest{
 yvar <- c("Loan.Type")
 sample_data <- sample_data[c(1:750),]
-m2.xvar0 <- c("sex", "married", "age", "havejob", "educ", "rural", "region","income")
-BchMk.BAG <- BAG_Model(sample_data, c(m2.xvar0, "political.afl", "networth"), yvar)
-BchMk.BAG$finalModel
+xvar <- c("sex", "married", "age", "havejob", "educ", "political.afl",
+"rural", "region", "fin.intermdiaries", "fin.knowldge", "income")
+BchMk.BAG <- BAG_Model(sample_data, c(xvar, "networth"), yvar )
 BchMk.BAG$Roc$auc
 }
 }

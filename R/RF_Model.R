@@ -18,26 +18,26 @@
 #' @importFrom stats binomial pnorm predict
 #' @examples
 #' \donttest{
+#' sample_data <- sample_data[c(1:750),]
 #' yvar <- c("Loan.Type")
-#' sample_data <- sample_data[c(1:250),]
-#' m2.xvar0 <- c("sex", "married", "age", "havejob", "educ", "rural", "region","income")
-#' BchMk.MLR.1 <- RF_Model(sample_data, c(m2.xvar0, "political.afl", "networth"), yvar)
-#' BchMk.MLR.1$finalModel
-#' BchMk.MLR.1$Roc$auc
+#' xvar <- c("sex", "married", "age", "havejob", "educ", "political.afl",
+#' "rural", "region", "fin.intermdiaries", "fin.knowldge", "income")
+#' BchMk.RF <- RF_Model(sample_data, c(xvar, "networth"), yvar )
+#' BchMk.RF
 #'  }
-
 
 
 
 
 RF_Model <- function(Data, xvar, yvar){ # #' @export was deleted
 
-  #I ADDED THIS IF BUT IT GIVES ERROR
+
   if (yvar == "Loan.Type"){
     Data.sub <- Data[, c(xvar, yvar)]
     Data.sub[, yvar] <- factor(Data.sub[, yvar], levels = c( "No.Loan", "Formal",  "Informal", "L.Both"))
   } else if(yvar == "multi.level"){
     Data.sub <- Data[, c(xvar, yvar)]
+    Data.sub[, yvar] <- factor(Data.sub[, yvar], levels = c( "zero", "one"))
   }
 
   #set.seed(87)

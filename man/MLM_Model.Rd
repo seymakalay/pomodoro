@@ -21,7 +21,7 @@ Multinominal Logistic Model
 }
 \details{
 Multi-nominal model is the generalized form of generalized logistic model and can be define as
- \deqn{\pi_{i}^{h} = P(y_{i}^{h} = 1 | \bold{x}_{\bold{i}}^{h})}
+ \deqn{\pi_{i}^{h} = P(y_{i}^{h} = 1 |  \bold{x}_{\bold{i}}^{h})}
   where \eqn{h}{h} presents the class labels ("1-of-h") on the basis of an input vector
   \eqn{x_j}{x_j}, in our case \eqn{x_j}{x_j} is loan types ("Formal Loan", "Informal Loan", "Both Loan", and "No Loan").  Furthermore,
 
@@ -37,8 +37,9 @@ for \eqn{i}{i} \eqn{\in}{\in} \eqn{1,\ldots,h-1}{1,...,h-1} . And the class prob
 \examples{
 yvar <- c("Loan.Type")
 sample_data <- sample_data[c(1:750),]
-m2.xvar0 <- c("sex", "married", "age", "havejob", "educ", "rural", "region","income")
-BchMk.MLM <- MLM_Model(sample_data, c(m2.xvar0, "political.afl", "networth"), yvar)
+xvar <- c("sex", "married", "age", "havejob", "educ", "political.afl",
+"rural", "region", "fin.intermdiaries", "fin.knowldge", "income")
+BchMk.MLM <- MLM_Model(sample_data, c(xvar, "networth"), yvar )
 BchMk.MLM$finalModel
 BchMk.MLM$Roc$auc
 }

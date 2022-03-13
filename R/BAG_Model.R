@@ -1,4 +1,3 @@
-
 #' Bagging Model
 #'
 #' @details Decision trees suffer from high
@@ -24,11 +23,12 @@
 #' \donttest{
 #' yvar <- c("Loan.Type")
 #' sample_data <- sample_data[c(1:750),]
-#' m2.xvar0 <- c("sex", "married", "age", "havejob", "educ", "rural", "region","income")
-#' BchMk.BAG <- BAG_Model(sample_data, c(m2.xvar0, "political.afl", "networth"), yvar)
-#' BchMk.BAG$finalModel
+#' xvar <- c("sex", "married", "age", "havejob", "educ", "political.afl",
+#' "rural", "region", "fin.intermdiaries", "fin.knowldge", "income")
+#' BchMk.BAG <- BAG_Model(sample_data, c(xvar, "networth"), yvar )
 #' BchMk.BAG$Roc$auc
 #' }
+
 
 
 
@@ -41,10 +41,11 @@ BAG_Model <- function(Data, xvar, yvar){
 
   } else if(yvar == "multi.level"){
     Data.sub <- Data[, c(xvar, yvar)]
+    Data.sub[, yvar] <- factor(Data.sub[, yvar], levels = c("zero", "one"))
 
   }
 
-  train.set <- createDataPartition(Data.sub$Loan.Type, p=.80,list=0)
+  train.set <- createDataPartition(Data.sub[, yvar], p=.80,list=0)
   Data.sub.train <- Data.sub[ train.set, ]
   Data.sub.test  <- Data.sub[-train.set, ]
 

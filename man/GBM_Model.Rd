@@ -32,8 +32,9 @@ An event probability of stochastic gradient boosting model is given by
 \donttest{
 yvar <- c("Loan.Type")
 sample_data <- sample_data[c(1:120),]
-m2.xvar0 <- c("sex", "married", "age", "havejob", "educ", "rural", "region","income")
-BchMk.GBM <- GBM_Model(sample_data, c(m2.xvar0, "political.afl", "networth"), yvar)
+xvar <- c("sex", "married", "age", "havejob", "educ", "political.afl",
+"rural", "region", "fin.intermdiaries", "fin.knowldge", "income")
+BchMk.GBM <- GBM_Model(sample_data, c(xvar, "networth"), yvar )
 BchMk.GBM$finalModel
 BchMk.GBM$Roc$auc
 }

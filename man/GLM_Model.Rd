@@ -36,8 +36,9 @@ The log-odds can be define as:
 \examples{
 yvar <- c("multi.level")
 sample_data <- sample_data[c(1:750),]
-m2.xvar0 <- c("sex", "married", "age", "havejob", "educ", "rural", "region","income")
-BchMk.GLM <- GLM_Model(sample_data, c(m2.xvar0, "political.afl", "networth"), yvar)
+xvar <- c("sex", "married", "age", "havejob", "educ", "political.afl",
+"rural", "region", "fin.intermdiaries", "fin.knowldge", "income")
+BchMk.GLM <- GLM_Model(sample_data, c(xvar, "networth"), yvar )
 BchMk.GLM$finalModel
 BchMk.GLM$Roc$auc
 }

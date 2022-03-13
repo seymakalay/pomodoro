@@ -29,11 +29,11 @@ fresh sample of  \eqn{m_{try}}{m_{try}} which we usually set  to \eqn{m_{try} \a
 }
 \examples{
 \donttest{
+sample_data <- sample_data[c(1:750),]
 yvar <- c("Loan.Type")
-sample_data <- sample_data[c(1:250),]
-m2.xvar0 <- c("sex", "married", "age", "havejob", "educ", "rural", "region","income")
-BchMk.MLR.1 <- RF_Model(sample_data, c(m2.xvar0, "political.afl", "networth"), yvar)
-BchMk.MLR.1$finalModel
-BchMk.MLR.1$Roc$auc
+xvar <- c("sex", "married", "age", "havejob", "educ", "political.afl",
+"rural", "region", "fin.intermdiaries", "fin.knowldge", "income")
+BchMk.RF <- RF_Model(sample_data, c(xvar, "networth"), yvar )
+BchMk.RF
  }
 }
