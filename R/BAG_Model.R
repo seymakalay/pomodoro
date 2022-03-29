@@ -11,6 +11,7 @@
 #' by each \eqn{B}{B} trees and take a majority vote. Therefore, bagging for classification problem  defined as
 #'  \deqn{\hat{f}(x)=arg\max_{k}\hat{f}^{*b}(x)}
 #'
+#'
 #' @param Data The name of the Dataset.
 #' @param xvar X variables.
 #' @param yvar Y variable.
@@ -19,6 +20,10 @@
 #' @importFrom  gbm gbm.fit
 #' @importFrom  ipred bagging
 #' @importFrom stats binomial pnorm predict
+#' @importFrom  caret createDataPartition
+#' @importFrom  caret trainControl
+#' @importFrom  caret train
+#' @importFrom  pROC multiclass.roc
 #' @examples
 #' \donttest{
 #' yvar <- c("Loan.Type")

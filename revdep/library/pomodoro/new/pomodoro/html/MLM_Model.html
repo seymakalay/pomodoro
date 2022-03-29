@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Multinominal Logistic Model</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for MLM_Model {pomodoro}"><tr><td>MLM_Model {pomodoro}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Multinominal Logistic Model</h2>
+
+<h3>Description</h3>
+
+<p>Multinominal Logistic Model
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+MLM_Model(Data, xvar, yvar)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>Data</code></td>
+<td>
+<p>The name of the Dataset.</p>
+</td></tr>
+<tr valign="top"><td><code>xvar</code></td>
+<td>
+<p>X variables.</p>
+</td></tr>
+<tr valign="top"><td><code>yvar</code></td>
+<td>
+<p>Y variable.</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>Multi-nominal model is the generalized form of generalized logistic model and can be define as
+</p>
+<p style="text-align: center;"><i>&pi;_{i}^{h} = P(y_{i}^{h} = 1 | \bold{x}_{\bold{i}}^{h})</i></p>
+
+<p>where <i>h</i> presents the class labels (&quot;1-of-h&quot;) on the basis of an input vector
+<i>x_j</i>, in our case <i>x_j</i> is loan types (&quot;Formal Loan&quot;, &quot;Informal Loan&quot;, &quot;Both Loan&quot;, and &quot;No Loan&quot;).  Furthermore,
+</p>
+<p><i>y_{i}^h =  1</i>if the weight <b>w</b>
+of  <i>x_j</i> corresponds to belong a class and  <i>y_{i}^h=0</i> otherwise.
+For <i>i</i> <i>\in</i> <i>1,...,h</i> and
+the weight vectors <b>w^i</b> corresponds to class <i>i</i>.
+</p>
+<p>We set <i>{\bold{{w}}^{h}} = 0</i> and the parameters to be learned are the weight vectors <b>w^i</b>
+for <i>i</i> <i>\in</i> <i>1,...,h-1</i> . And the class probabilities must satisfy
+</p>
+<p style="text-align: center;"><i>&sum;_{i=1}^{h} P(y_{i}^{h} = 1|\bold{x}_{\bold{i}}^{h}, \bold{w}) = 1.</i></p>
+
+
+
+<h3>Value</h3>
+
+<p>The output from  <code><a href="../../pomodoro/help/MLM_Model.html">MLM_Model</a></code>.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+yvar &lt;- c("Loan.Type")
+sample_data &lt;- sample_data[c(1:750),]
+xvar &lt;- c("sex", "married", "age", "havejob", "educ", "political.afl",
+"rural", "region", "fin.intermdiaries", "fin.knowldge", "income")
+BchMk.MLM &lt;- MLM_Model(sample_data, c(xvar, "networth"), yvar )
+BchMk.MLM$finalModel
+BchMk.MLM$Roc$auc
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>pomodoro</em> version 3.6.0 <a href="00Index.html">Index</a>]</div>
+</div></body></html>

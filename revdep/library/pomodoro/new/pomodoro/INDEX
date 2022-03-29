@@ -1,0 +1,9 @@
+BAG_Model               Bagging Model
+Combined_Performance    Combined Performance of the Data Splits
+Estimate_Models         Results of the Each Data and Data Splits
+GBM_Model               Gradient Boosting Model
+GLM_Model               Generalized Linear Model
+MLM_Model               Multinominal Logistic Model
+RF_Model                Random Forest
+sample_data             Sample data for analysis. A dataset containing
+                        information of access to credit.

@@ -1,4 +1,3 @@
-
 #' Gradient Boosting Model
 #'
 #' @details Unlike bagging trees, boosting does not use bootstrap sampling,
@@ -8,6 +7,7 @@
 #'  where \eqn{f(x)} is in the range of \eqn{[-\infty,\infty]} and its initial estimate of the model is
 #'  \eqn{f^{(0)}_i=log(\frac{\pi_{i}}{1-\pi_{i}})},
 #'  where \eqn{\hat{\pi}} is the estimated sample proportion of a single class from the training set.
+#'
 #'
 #' @param Data The name of the Dataset.
 #' @param xvar X variables.

@@ -58,7 +58,7 @@ Estimate_Models gives the results based on the splits of the `exog`.
 Combined_Performance prints out the total performance of these splits.
 
 ```{r ComPerf, echo=T}
-Sub.CCP.RF <- list (Mdl.1 = CCP.RF$EstMdl$`D.1+networth`,
+Sub.CCP.RF <- list(Mdl.1 = CCP.RF$EstMdl$`D.1+networth`,
 Mdl.0 = CCP.RF$EstMdl$`D.0+networth`)
 CCP.NoCCP.RF <- Combined_Performance (Sub.CCP.RF)
 ```

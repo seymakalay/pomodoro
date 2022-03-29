@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Combined Performance of the Data Splits</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for Combined_Performance {pomodoro}"><tr><td>Combined_Performance {pomodoro}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Combined Performance of the Data Splits</h2>
+
+<h3>Description</h3>
+
+<p>Combined Performance of the Data Splits
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+Combined_Performance(Sub.Est.Mdls)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>Sub.Est.Mdls</code></td>
+<td>
+<p>is the total perfomance of exog.</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>The output from  <code><a href="../../pomodoro/help/Combined_Performance.html">Combined_Performance</a></code>.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+
+sample_data &lt;- sample_data[c(1:750),]
+yvar &lt;- c("Loan.Type")
+xvar &lt;- c("sex", "married", "age", "havejob", "educ", "political.afl",
+"rural", "region", "fin.intermdiaries", "fin.knowldge", "income")
+CCP.RF &lt;- Estimate_Models(sample_data, yvar, xvec = xvar, exog = "political.afl",
+xadd = c("networth", "networth_homequity", "liquid.assets"),
+type = "RF", dnames = c("0","1"))
+Sub.CCP.RF &lt;- list (Mdl.1 = CCP.RF$EstMdl$`D.1+networth`,
+Mdl.0 = CCP.RF$EstMdl$`D.0+networth`)
+CCP.NoCCP.RF &lt;- Combined_Performance (Sub.CCP.RF)
+
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>pomodoro</em> version 3.6.0 <a href="00Index.html">Index</a>]</div>
+</div></body></html>

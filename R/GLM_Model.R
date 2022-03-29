@@ -1,5 +1,3 @@
-
-
 #' Generalized Linear Model
 #'
 #' @details Let \bold{y} be a vector of response variable of accessing credit for each applicant
@@ -14,6 +12,7 @@
 #'  \eqn{\beta_{0}}{\beta_{0}} is the intercept, \eqn{\beta = (\beta_{1},\ldots, \beta_{p})} is
 #'  a \eqn{p} \eqn{x} \eqn{1} vector of coefficients and
 #' 	     \eqn{\bold{x_{i}}}{x_{i}} is the \eqn{i_{th}}{i_{th}} row of  \bold{x}.
+#'
 #'
 #' @param Data The name of the Dataset.
 #' @param xvar X variables.

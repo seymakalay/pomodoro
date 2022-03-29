@@ -1,5 +1,5 @@
-
 #' Combined Performance of the Data Splits
+#'
 #'
 #' @param Sub.Est.Mdls is the total perfomance of exog.
 #' @return The output from  \code{\link{Combined_Performance}}.

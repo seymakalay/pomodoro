@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Gradient Boosting Model</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for GBM_Model {pomodoro}"><tr><td>GBM_Model {pomodoro}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Gradient Boosting Model</h2>
+
+<h3>Description</h3>
+
+<p>Gradient Boosting Model
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+GBM_Model(Data, xvar, yvar)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>Data</code></td>
+<td>
+<p>The name of the Dataset.</p>
+</td></tr>
+<tr valign="top"><td><code>xvar</code></td>
+<td>
+<p>X variables.</p>
+</td></tr>
+<tr valign="top"><td><code>yvar</code></td>
+<td>
+<p>Y variable.</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>Unlike bagging trees, boosting does not use bootstrap sampling,
+rather each tree is fit using information from previous trees.
+An event probability of stochastic gradient boosting model is given by
+</p>
+<p style="text-align: center;"><i>\hat{&pi;_i} = \frac{1}{1 + exp[-f(x)]^\prime}</i></p>
+
+<p>where <i>f(x)</i> is in the range of <i>[-&infin;,&infin;]</i> and its initial estimate of the model is
+<i>f^{(0)}_i=log(\frac{&pi;_{i}}{1-&pi;_{i}})</i>,
+where <i>\hat{&pi;}</i> is the estimated sample proportion of a single class from the training set.
+</p>
+
+
+<h3>Value</h3>
+
+<p>The output from  <code><a href="../../pomodoro/help/GBM_Model.html">GBM_Model</a></code>.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+
+yvar &lt;- c("Loan.Type")
+sample_data &lt;- sample_data[c(1:120),]
+xvar &lt;- c("sex", "married", "age", "havejob", "educ", "political.afl",
+"rural", "region", "fin.intermdiaries", "fin.knowldge", "income")
+BchMk.GBM &lt;- GBM_Model(sample_data, c(xvar, "networth"), yvar )
+BchMk.GBM$finalModel
+BchMk.GBM$Roc$auc
+
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>pomodoro</em> version 3.6.0 <a href="00Index.html">Index</a>]</div>
+</div></body></html>

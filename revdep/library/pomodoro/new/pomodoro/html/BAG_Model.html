@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Bagging Model</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for BAG_Model {pomodoro}"><tr><td>BAG_Model {pomodoro}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Bagging Model</h2>
+
+<h3>Description</h3>
+
+<p>Bagging Model
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+BAG_Model(Data, xvar, yvar)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>Data</code></td>
+<td>
+<p>The name of the Dataset.</p>
+</td></tr>
+<tr valign="top"><td><code>xvar</code></td>
+<td>
+<p>X variables.</p>
+</td></tr>
+<tr valign="top"><td><code>yvar</code></td>
+<td>
+<p>Y variable.</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>Decision trees suffer from high
+variance (If we split the training data-set randomly into two parts and set a decision tree to both parts, the results might be quite different).
+Bagging is an ensemble procedure which reduces the variance and increases the prediction accuracy of a statistical learning method
+by considering many training sets
+(<i>\hat{f}^{1}(x),\hat{f}^{2}(x),&hellip;,\hat{f}^{B}(x)</i>)
+from the population. Since we can not have multiple training-sets, from a single training data-set, we can generate
+<i>B</i> different bootstrapped training data-sets
+(<i>\hat{f}^{*1}(x), \hat{f}^{*2}(x), &hellip;,\hat{f}^{*B}(x)</i>)
+by each <i>B</i> trees and take a majority vote. Therefore, bagging for classification problem  defined as
+</p>
+<p style="text-align: center;"><i>\hat{f}(x)=arg\max_{k}\hat{f}^{*b}(x)</i></p>
+
+
+
+<h3>Value</h3>
+
+<p>The output from  <code><a href="../../pomodoro/help/BAG_Model.html">BAG_Model</a></code>.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+
+yvar &lt;- c("Loan.Type")
+sample_data &lt;- sample_data[c(1:750),]
+xvar &lt;- c("sex", "married", "age", "havejob", "educ", "political.afl",
+"rural", "region", "fin.intermdiaries", "fin.knowldge", "income")
+BchMk.BAG &lt;- BAG_Model(sample_data, c(xvar, "networth"), yvar )
+BchMk.BAG$Roc$auc
+
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>pomodoro</em> version 3.6.0 <a href="00Index.html">Index</a>]</div>
+</div></body></html>
