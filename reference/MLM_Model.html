@@ -73,16 +73,16 @@
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
     <p>Multi-nominal model is the generalized form of generalized logistic model and can be define as
- $$\pi_{i}^{h} = P(y_{i}^{h} = 1 |  \bold{x}_{\bold{i}}^{h})$$
-  where \(h\) presents the class labels ("1-of-h") on the basis of an input vector
-  \(x_j\), in our case \(x_j\) is loan types ("Formal Loan", "Informal Loan", "Both Loan", and "No Loan").  Furthermore,</p>
+$$\pi_{i}^{h} = P(y_{i}^{h} = 1 | \bold{x}_{\bold{i}}^{h})$$
+where \(h\) presents the class labels ("1-of-h") on the basis of an input vector
+\(x_j\), in our case \(x_j\) is loan types ("Formal Loan", "Informal Loan", "Both Loan", and "No Loan").  Furthermore,</p>
 <p>\(y_{i}^h =  1\)if the weight <b>w</b>
-    of  \(x_j\) corresponds to belong a class and  \(y_{i}^h=0\) otherwise.
-    For \(i\) \(\in\) \(1,\ldots,h\) and
-    the weight vectors <b>w^i</b> corresponds to class \(i\).</p>
+  of  \(x_j\) corresponds to belong a class and  \(y_{i}^h=0\) otherwise.
+  For \(i\) \(\in\) \(1,\ldots,h\) and
+  the weight vectors <b>w^i</b> corresponds to class \(i\).</p>
 <p>We set \({\bold{{w}}^{h}} = 0\) and the parameters to be learned are the weight vectors <b>w^i</b>
 for \(i\) \(\in\) \(1,\ldots,h-1\) . And the class probabilities must satisfy
-$$\sum_{i=1}^{h} P(y_{i}^{h} = 1|\bold{x}_{\bold{i}}^{h}, \bold{w}) = 1.$$</p>
+$$\sum_{i=1}^{h} P(y_{i}^{h} = 1 | \bold{x}_{\bold{i}}^{h}, \bold{w}) = 1.$$</p>
     </div>
 
     <div class="section level2">
@@ -94,332 +94,351 @@ $$\sum_{i=1}^{h} P(y_{i}^{h} = 1|\bold{x}_{\bold{i}}^{h}, \bold{w}) = 1.$$</p>
 <span class="r-in"><span class="va">BchMk.MLM</span> <span class="op">&lt;-</span> <span class="fu">MLM_Model</span><span class="op">(</span><span class="va">sample_data</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="va">xvar</span>, <span class="st">"networth"</span><span class="op">)</span>, <span class="va">yvar</span> <span class="op">)</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> + Fold01: decay=0e+00 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> # weights:  56 (39 variable)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> initial  value 751.371544 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  10 value 364.317387</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  20 value 350.753768</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  30 value 348.444136</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  40 value 348.181058</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> final  value 348.178037 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> initial  value 749.985249 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  10 value 390.189095</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  20 value 366.164169</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  30 value 362.638149</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  40 value 353.143456</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 351.871912</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> final  value 351.871868 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> converged</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> - Fold01: decay=0e+00 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> + Fold01: decay=1e-01 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> # weights:  56 (39 variable)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> initial  value 751.371544 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  10 value 366.434031</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  20 value 353.088211</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  30 value 351.658889</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  40 value 351.523920</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> final  value 351.522126 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> initial  value 749.985249 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  10 value 404.690655</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  20 value 379.458555</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  30 value 359.553939</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  40 value 356.500037</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> final  value 356.416071 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> converged</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> - Fold01: decay=1e-01 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> + Fold01: decay=1e-04 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> # weights:  56 (39 variable)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> initial  value 751.371544 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  10 value 364.319525</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  20 value 350.757043</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  30 value 348.447503</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  40 value 348.184515</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> final  value 348.181498 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> initial  value 749.985249 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  10 value 390.204089</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  20 value 366.178954</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  30 value 362.647646</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  40 value 353.168374</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 351.877119</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> final  value 351.877034 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> converged</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> - Fold01: decay=1e-04 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> + Fold02: decay=0e+00 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> # weights:  56 (39 variable)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> initial  value 751.371544 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  10 value 492.002887</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  20 value 378.086846</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  30 value 361.436815</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  40 value 348.894798</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 348.482864</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> final  value 348.477989 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> initial  value 748.598955 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  10 value 419.881851</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  20 value 389.894461</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  30 value 363.165440</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  40 value 360.187220</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 360.116426</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> final  value 360.116420 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> converged</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> - Fold02: decay=0e+00 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> + Fold02: decay=1e-01 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> # weights:  56 (39 variable)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> initial  value 751.371544 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  10 value 504.496632</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  20 value 386.479663</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  30 value 364.091569</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  40 value 352.995781</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 352.744397</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> final  value 352.738697 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> initial  value 748.598955 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  10 value 432.264391</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  20 value 391.558929</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  30 value 367.008465</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  40 value 363.814790</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 363.790915</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 363.790913</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 363.790913</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> final  value 363.790913 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> converged</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> - Fold02: decay=1e-01 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> + Fold02: decay=1e-04 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> # weights:  56 (39 variable)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> initial  value 751.371544 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  10 value 492.016367</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  20 value 378.098122</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  30 value 361.427281</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  40 value 348.867995</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 348.487672</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> final  value 348.482721 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> initial  value 748.598955 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  10 value 419.894608</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  20 value 389.902015</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  30 value 363.162958</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  40 value 360.228657</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 360.120420</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 360.120417</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 360.120417</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> final  value 360.120417 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> converged</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> - Fold02: decay=1e-04 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> + Fold03: decay=0e+00 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> # weights:  56 (39 variable)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> initial  value 748.598955 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  10 value 495.675932</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  20 value 380.896733</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  30 value 354.550296</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  40 value 346.585212</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 346.364625</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> final  value 346.364506 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> initial  value 749.985249 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  10 value 409.973085</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  20 value 382.059992</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  30 value 355.717250</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  40 value 352.548630</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> final  value 352.516572 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> converged</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> - Fold03: decay=0e+00 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> + Fold03: decay=1e-01 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> # weights:  56 (39 variable)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> initial  value 748.598955 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  10 value 506.464626</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  20 value 380.806674</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  30 value 354.117154</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  40 value 350.490000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 350.423600</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 350.423597</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 350.423597</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> final  value 350.423597 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> initial  value 749.985249 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  10 value 423.549791</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  20 value 386.523549</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  30 value 359.338148</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  40 value 356.988829</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 356.299598</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> final  value 356.298575 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> converged</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> - Fold03: decay=1e-01 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> + Fold03: decay=1e-04 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> # weights:  56 (39 variable)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> initial  value 748.598955 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  10 value 495.687719</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  20 value 380.905010</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  30 value 354.553294</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  40 value 346.589456</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 346.369058</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> final  value 346.368945 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> initial  value 749.985249 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  10 value 409.987039</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  20 value 382.065458</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  30 value 355.707762</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  40 value 352.552624</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> final  value 352.520669 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> converged</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> - Fold03: decay=1e-04 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> + Fold04: decay=0e+00 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> # weights:  56 (39 variable)</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> initial  value 748.598955 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  10 value 481.097305</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  20 value 366.585522</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  30 value 352.339796</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  40 value 348.945767</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 348.844031</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> final  value 348.843999 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  10 value 418.227240</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  20 value 376.373015</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  30 value 357.468605</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  40 value 355.255485</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 355.215816</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 355.215813</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 355.215813</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> final  value 355.215813 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> converged</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> - Fold04: decay=0e+00 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> + Fold04: decay=1e-01 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> # weights:  56 (39 variable)</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> initial  value 748.598955 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  10 value 491.395945</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  20 value 378.396305</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  30 value 360.604675</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  40 value 353.998627</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 353.456140</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> final  value 353.455998 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  10 value 430.992888</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  20 value 384.158108</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  30 value 364.990690</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  40 value 359.479628</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 358.961101</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> final  value 358.959507 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> converged</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> - Fold04: decay=1e-01 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> + Fold04: decay=1e-04 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> # weights:  56 (39 variable)</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> initial  value 748.598955 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  10 value 481.108664</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  20 value 366.601032</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  30 value 352.362729</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  40 value 348.966816</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 348.865035</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  60 value 348.860601</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> final  value 348.849958 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  10 value 418.240369</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  20 value 376.383910</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  30 value 357.488800</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  40 value 355.275023</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 355.235222</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  60 value 355.223637</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> final  value 355.220426 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> converged</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> - Fold04: decay=1e-04 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> + Fold05: decay=0e+00 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> # weights:  56 (39 variable)</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> initial  value 748.598955 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  10 value 476.063523</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  20 value 371.366262</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  30 value 357.894435</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  40 value 345.126177</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 344.871878</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> final  value 344.869464 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  10 value 493.217141</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  20 value 386.128046</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  30 value 359.191752</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  40 value 354.113499</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 354.077689</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> final  value 354.077675 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> converged</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> - Fold05: decay=0e+00 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> + Fold05: decay=1e-01 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> # weights:  56 (39 variable)</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> initial  value 748.598955 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  10 value 488.746061</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  20 value 377.661320</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  30 value 356.923705</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  40 value 349.034794</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 348.951754</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> final  value 348.951618 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  10 value 500.590244</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  20 value 388.846660</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  30 value 361.946977</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  40 value 357.686497</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 357.597873</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> final  value 357.597862 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> converged</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> - Fold05: decay=1e-01 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> + Fold05: decay=1e-04 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> # weights:  56 (39 variable)</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> initial  value 748.598955 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  10 value 476.077154</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  20 value 371.376069</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  30 value 357.895907</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  40 value 345.130291</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 344.876338</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> final  value 344.873916 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  10 value 493.225491</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  20 value 386.132872</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  30 value 359.196275</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  40 value 354.117718</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 354.081463</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> final  value 354.081449 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> converged</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> - Fold05: decay=1e-04 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> + Fold06: decay=0e+00 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> # weights:  56 (39 variable)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> initial  value 747.212661 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  10 value 468.672664</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  20 value 377.451939</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  30 value 358.210489</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  40 value 349.724359</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 349.580936</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> final  value 349.580795 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> initial  value 751.371544 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  10 value 402.814905</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  20 value 374.041126</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  30 value 352.165910</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  40 value 346.553149</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 346.483916</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 346.483915</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 346.483915</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> final  value 346.483915 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> converged</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> - Fold06: decay=0e+00 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> + Fold06: decay=1e-01 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> # weights:  56 (39 variable)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> initial  value 747.212661 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  10 value 479.627477</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  20 value 383.927129</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  30 value 358.552621</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  40 value 353.786394</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 353.658844</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> final  value 353.658312 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> initial  value 751.371544 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  10 value 414.868285</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  20 value 378.327828</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  30 value 353.100507</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  40 value 350.546340</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 350.511182</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 350.511182</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 350.511182</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> final  value 350.511182 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> converged</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> - Fold06: decay=1e-01 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> + Fold06: decay=1e-04 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> # weights:  56 (39 variable)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> initial  value 747.212661 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  10 value 468.684467</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  20 value 377.463622</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  30 value 358.217236</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  40 value 349.729193</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 349.585408</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> final  value 349.585268 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> initial  value 751.371544 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  10 value 402.827235</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  20 value 374.048168</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  30 value 349.402414</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  40 value 346.553442</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 346.488239</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 346.488237</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 346.488237</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> final  value 346.488237 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> converged</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> - Fold06: decay=1e-04 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> + Fold07: decay=0e+00 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> # weights:  56 (39 variable)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> initial  value 749.985249 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  10 value 480.520903</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  20 value 377.444154</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  30 value 353.128165</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  40 value 345.608787</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 345.459556</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> final  value 345.459445 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> initial  value 751.371544 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  10 value 416.987548</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  20 value 381.659211</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  30 value 369.113737</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  40 value 357.366430</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 357.074680</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 357.074678</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 357.074678</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> final  value 357.074678 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> converged</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> - Fold07: decay=0e+00 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> + Fold07: decay=1e-01 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> # weights:  56 (39 variable)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> initial  value 749.985249 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  10 value 493.821669</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  20 value 380.135940</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  30 value 353.605207</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  40 value 349.572271</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 349.533239</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> final  value 349.533226 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> initial  value 751.371544 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  10 value 429.261716</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  20 value 391.851807</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  30 value 364.395028</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  40 value 361.010257</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 360.896872</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 360.896870</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 360.896870</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> final  value 360.896870 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> converged</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> - Fold07: decay=1e-01 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> + Fold07: decay=1e-04 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> # weights:  56 (39 variable)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> initial  value 749.985249 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  10 value 480.535164</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  20 value 377.455658</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  30 value 353.134404</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  40 value 345.613835</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 345.463984</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> final  value 345.463874 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> initial  value 751.371544 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  10 value 417.000252</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  20 value 381.660475</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  30 value 369.161645</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  40 value 357.369951</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 357.078813</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 357.078811</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 357.078811</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> final  value 357.078811 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> converged</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> - Fold07: decay=1e-04 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> + Fold08: decay=0e+00 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> # weights:  56 (39 variable)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> initial  value 752.757838 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  10 value 367.531721</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  20 value 349.997188</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  30 value 348.181552</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  40 value 347.970064</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 347.968093</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> final  value 347.968087 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> initial  value 749.985249 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  10 value 492.434153</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  20 value 383.744008</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  30 value 360.665365</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  40 value 356.050340</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 355.926471</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> final  value 355.926437 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> converged</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> - Fold08: decay=0e+00 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> + Fold08: decay=1e-01 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> # weights:  56 (39 variable)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> initial  value 752.757838 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  10 value 369.824154</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  20 value 353.578640</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  30 value 352.143721</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  40 value 352.025807</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 352.023970</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> final  value 352.023965 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> initial  value 749.985249 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  10 value 500.628534</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  20 value 389.608986</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  30 value 365.120651</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  40 value 359.750021</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 359.685537</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> final  value 359.685527 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> converged</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> - Fold08: decay=1e-01 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> + Fold08: decay=1e-04 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> # weights:  56 (39 variable)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> initial  value 752.757838 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  10 value 367.533996</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  20 value 350.000476</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  30 value 348.185944</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  40 value 347.974513</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 347.972542</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> final  value 347.972535 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> initial  value 749.985249 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  10 value 492.443308</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  20 value 383.749990</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  30 value 360.670646</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  40 value 356.054778</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 355.930510</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> final  value 355.930469 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> converged</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> - Fold08: decay=1e-04 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> + Fold09: decay=0e+00 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> # weights:  56 (39 variable)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> initial  value 748.598955 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  10 value 482.372644</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  20 value 382.561764</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  30 value 365.586309</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  40 value 351.133992</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 350.184871</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> final  value 350.143464 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> initial  value 749.985249 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  10 value 374.801410</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  20 value 359.934353</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  30 value 358.557645</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  40 value 358.413562</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 358.410578</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 358.410577</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 358.410577</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> final  value 358.410577 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> converged</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> - Fold09: decay=0e+00 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> + Fold09: decay=1e-01 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> # weights:  56 (39 variable)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> initial  value 748.598955 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  10 value 493.340773</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  20 value 386.192398</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  30 value 362.534927</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  40 value 354.321035</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 354.158400</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> final  value 354.156458 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> initial  value 749.985249 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  10 value 376.829235</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  20 value 362.585755</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  30 value 361.741712</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  40 value 361.618506</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> final  value 361.616820 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> converged</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> - Fold09: decay=1e-01 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> + Fold09: decay=1e-04 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> # weights:  56 (39 variable)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> initial  value 748.598955 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  10 value 482.384631</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  20 value 382.572995</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  30 value 365.592078</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  40 value 351.082152</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 350.188873</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> final  value 350.147823 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> initial  value 749.985249 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  10 value 374.803457</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  20 value 359.937369</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  30 value 358.560911</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  40 value 358.416868</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 358.413888</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 358.413887</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 358.413886</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> final  value 358.413886 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> converged</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> - Fold09: decay=1e-04 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> + Fold10: decay=0e+00 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> # weights:  56 (39 variable)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> initial  value 751.371544 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  10 value 502.564298</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  20 value 379.743268</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  30 value 353.891103</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  40 value 346.896577</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 346.664529</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> final  value 346.661877 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> initial  value 749.985249 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  10 value 493.880021</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  20 value 380.761845</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  30 value 359.092519</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  40 value 353.833831</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 353.725149</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> final  value 353.725099 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> converged</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> - Fold10: decay=0e+00 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> + Fold10: decay=1e-01 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> # weights:  56 (39 variable)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> initial  value 751.371544 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  10 value 513.846068</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  20 value 386.210499</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  30 value 357.531882</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  40 value 351.135033</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 350.872906</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> final  value 350.871442 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> initial  value 749.985249 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  10 value 502.173209</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  20 value 388.370303</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  30 value 365.086920</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  40 value 357.966282</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 357.881277</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> final  value 357.881271 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> converged</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> - Fold10: decay=1e-01 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> + Fold10: decay=1e-04 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> # weights:  56 (39 variable)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> initial  value 751.371544 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  10 value 502.576719</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  20 value 379.751023</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  30 value 353.892884</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  40 value 346.902228</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 346.669800</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> final  value 346.666513 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> initial  value 749.985249 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  10 value 493.889168</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  20 value 380.770070</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  30 value 359.095571</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  40 value 353.838586</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 353.729758</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> final  value 353.729709 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> converged</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> - Fold10: decay=1e-04 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Aggregating results</span>
@@ -427,34 +446,37 @@ $$\sum_{i=1}^{h} P(y_{i}^{h} = 1|\bold{x}_{\bold{i}}^{h}, \bold{w}) = 1.$$</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Fitting decay = 0.1 on full training set</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> # weights:  56 (39 variable)</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> initial  value 833.162911 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  10 value 408.578154</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  20 value 393.672258</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  30 value 392.470009</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> iter  40 value 392.328865</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> final  value 392.326118 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  10 value 416.113945</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  20 value 401.363880</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  30 value 400.332356</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  40 value 400.105386</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 399.949630</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 399.949629</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> iter  50 value 399.949629</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> final  value 399.949629 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> converged</span>
 <span class="r-in"><span class="va">BchMk.MLM</span><span class="op">$</span><span class="va">finalModel</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Call:</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> nnet::multinom(formula = .outcome ~ ., data = dat, decay = param$decay)</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Coefficients:</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>          (Intercept)         sex      married        age    havejob        educ</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Formal     -2.744085 -0.08052509  0.036896047 -1.0830442 0.31369245  0.27880615</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Informal   -2.818296 -0.11941548 -0.005803761 -0.5875136 0.07289354 -0.00319335</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> L.Both     -3.299207  0.02057550 -0.270602324 -0.9213954 0.49270329  0.14584711</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>          (Intercept)          sex    married        age      havejob       educ</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Formal     -2.659253 -0.021537862  0.1975061 -0.9094484  0.325197181 0.13310268</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Informal   -2.619400  0.059575981 -0.1317913 -0.4214938 -0.001904514 0.08209539</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> L.Both     -3.435860  0.003430076  0.1096084 -0.9144233  0.465832201 0.34271215</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>          political.afl      rural      region fin.intermdiaries fin.knowldge</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Formal       0.2687575  0.3512704 -0.21502157        0.08159645   0.17375188</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Informal    -0.4672335 -0.1134654  0.25575221       -0.14683815   0.12374445</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> L.Both       0.2390123 -0.2293460  0.06995488        0.21848184   0.04403905</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Formal       0.3531963  0.4231619 -0.21824917        0.02891838   0.10540702</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Informal    -0.4044312 -0.3067345  0.15637728       -0.20220479   0.19984881</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> L.Both       0.1773511 -0.1550781 -0.03357011        0.15212475   0.02869293</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>              income   networth</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Formal    0.7099168  0.4001333</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Informal -2.3272713 -1.0252919</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> L.Both    0.3565595  0.1332427</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Formal    0.7313618  0.4550824</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Informal -2.1378193 -0.7227105</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> L.Both   -0.3554539 -0.1136251</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Residual Deviance: 784.6522 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> AIC: 862.6522 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Residual Deviance: 799.8993 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> AIC: 877.8993 </span>
 <span class="r-in"><span class="va">BchMk.MLM</span><span class="op">$</span><span class="va">Roc</span><span class="op">$</span><span class="va">auc</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Multi-class area under the curve: 0.7215</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Multi-class area under the curve: 0.7104</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

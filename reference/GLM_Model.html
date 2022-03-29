@@ -92,6 +92,7 @@ The log-odds can be define as:</p>
 <span class="r-in"><span class="st">"rural"</span>, <span class="st">"region"</span>, <span class="st">"fin.intermdiaries"</span>, <span class="st">"fin.knowldge"</span>, <span class="st">"income"</span><span class="op">)</span></span>
 <span class="r-in"><span class="va">BchMk.GLM</span> <span class="op">&lt;-</span> <span class="fu">GLM_Model</span><span class="op">(</span><span class="va">sample_data</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="va">xvar</span>, <span class="st">"networth"</span><span class="op">)</span>, <span class="va">yvar</span> <span class="op">)</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> + Fold01: parameter=none </span>
+<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>glm.fit: fitted probabilities numerically 0 or 1 occurred</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> - Fold01: parameter=none </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> + Fold02: parameter=none </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> - Fold02: parameter=none </span>
@@ -121,19 +122,19 @@ The log-odds can be define as:</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Coefficients:</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       (Intercept)                sex            married                age  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         -1.224266          -0.059746          -0.083770          -0.936011  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>          -1.20015           -0.08604           -0.14494           -0.88786  </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>           havejob               educ      political.afl              rural  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>          0.005373           0.067079           0.010826          -0.048795  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>           0.01713            0.05386           -0.01093           -0.26410  </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>            region  fin.intermdiaries       fin.knowldge             income  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         -0.011922          -0.093432           0.137360           0.886161  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>          -0.05056           -0.06949            0.11555            1.18957  </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>          networth  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>          0.141147  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>           0.14214  </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Degrees of Freedom: 600 Total (i.e. Null);  588 Residual</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Null Deviance:	    690.4 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Residual Deviance: 573.4 	AIC: 599.4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Residual Deviance: 570.9 	AIC: 596.9</span>
 <span class="r-in"><span class="va">BchMk.GLM</span><span class="op">$</span><span class="va">Roc</span><span class="op">$</span><span class="va">auc</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Multi-class area under the curve: 0.6788</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Multi-class area under the curve: 0.6886</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

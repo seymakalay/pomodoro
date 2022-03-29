@@ -76,8 +76,8 @@
 from the total of \(p\) predictors in each split,
 random forest does not consider a majority of the \(p\) predictors, and considers in each split a
 fresh sample of  \(m_{try}\) which we usually set  to \(m_{try} \approx \sqrt{p}\)
- Random forests which de-correlate the trees by considering  \(m_{try} \approx \sqrt{p}\)
- show an improvement over bagged trees  \(m = p\).</p>
+Random forests which de-correlate the trees by considering  \(m_{try} \approx \sqrt{p}\)
+show an improvement over bagged trees  \(m = p\).</p>
     </div>
 
     <div class="section level2">
@@ -160,13 +160,13 @@ fresh sample of  \(m_{try}\) which we usually set  to \(m_{try} \approx \sqrt{p}
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Pre-processing: centered (12), scaled (12) </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Resampling: Cross-Validated (10 fold) </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Summary of sample sizes: 542, 540, 541, 542, 543, 541, ... </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Summary of sample sizes: 542, 540, 541, 542, 540, 540, ... </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Resampling results across tuning parameters:</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   mtry  Accuracy   Kappa    </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    2    0.7726481  0.2401311</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    7    0.7611116  0.2440523</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   12    0.7462164  0.2351428</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    2    0.7687890  0.2233192</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    7    0.7654001  0.2757633</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   12    0.7620941  0.2767858</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Accuracy was used to select the optimal model using the largest value.</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> The final value used for the model was mtry = 2.</span>

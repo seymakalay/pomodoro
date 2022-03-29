@@ -1,45 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>/404.html</loc>
+    <loc>https://seymakalay.github.io/pomodoro/404.html</loc>
   </url>
   <url>
-    <loc>/articles/Pomodoro_Vignette.html</loc>
+    <loc>https://seymakalay.github.io/pomodoro/articles/Pomodoro_Vignette.html</loc>
   </url>
   <url>
-    <loc>/articles/index.html</loc>
+    <loc>https://seymakalay.github.io/pomodoro/articles/index.html</loc>
   </url>
   <url>
-    <loc>/authors.html</loc>
+    <loc>https://seymakalay.github.io/pomodoro/authors.html</loc>
   </url>
   <url>
-    <loc>/index.html</loc>
+    <loc>https://seymakalay.github.io/pomodoro/index.html</loc>
   </url>
   <url>
-    <loc>/reference/BAG_Model.html</loc>
+    <loc>https://seymakalay.github.io/pomodoro/reference/BAG_Model.html</loc>
   </url>
   <url>
-    <loc>/reference/Combined_Performance.html</loc>
+    <loc>https://seymakalay.github.io/pomodoro/reference/Combined_Performance.html</loc>
   </url>
   <url>
-    <loc>/reference/Estimate_Models.html</loc>
+    <loc>https://seymakalay.github.io/pomodoro/reference/Estimate_Models.html</loc>
   </url>
   <url>
-    <loc>/reference/GBM_Model.html</loc>
+    <loc>https://seymakalay.github.io/pomodoro/reference/GBM_Model.html</loc>
   </url>
   <url>
-    <loc>/reference/GLM_Model.html</loc>
+    <loc>https://seymakalay.github.io/pomodoro/reference/GLM_Model.html</loc>
   </url>
   <url>
-    <loc>/reference/MLM_Model.html</loc>
+    <loc>https://seymakalay.github.io/pomodoro/reference/MLM_Model.html</loc>
   </url>
   <url>
-    <loc>/reference/RF_Model.html</loc>
+    <loc>https://seymakalay.github.io/pomodoro/reference/RF_Model.html</loc>
   </url>
   <url>
-    <loc>/reference/index.html</loc>
+    <loc>https://seymakalay.github.io/pomodoro/reference/index.html</loc>
   </url>
   <url>
-    <loc>/reference/sample_data.html</loc>
+    <loc>https://seymakalay.github.io/pomodoro/reference/sample_data.html</loc>
   </url>
 </urlset>
