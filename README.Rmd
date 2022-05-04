@@ -13,7 +13,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# pomodoro
+# pomodoro  <a href='https://seymakalay.github.io/pomodoro/index.html'><img src='man/figures/pomodoro.png' align="right" height="138.5" /></a>
 
  <!-- badges: start 
  [![R-CMD-check](https://github.com/seymakalay/pomodoro/workflows/R-CMD-check/badge.svg)](https://github.com/seymakalay/pomodoro/actions) -->
