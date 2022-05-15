@@ -3,7 +3,7 @@ pkgdown: 2.0.3
 pkgdown_sha: ~
 articles:
   Pomodoro_Vignette: Pomodoro_Vignette.html
-last_built: 2022-05-04T14:21Z
+last_built: 2022-05-15T19:53Z
 urls:
   reference: https://seymakalay.github.io/pomodoro/reference
   article: https://seymakalay.github.io/pomodoro/articles
